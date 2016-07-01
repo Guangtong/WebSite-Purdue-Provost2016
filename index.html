@@ -256,9 +256,12 @@
 		<img id="video-poster" src="videos/FeatureVideo-1606-poster-small.jpg" alt="feature poster" style="display: none">
 		<!--<iframe id="video" src="https://www.youtube.com/embed/A7HmDFlzihg?rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1" frameborder="0" allowfullscreen></iframe>-->
 	</div>
-		
-	<div id="featureEventTile"> 
-		<h2><a href="http://www.purdue.edu/provost">Title <span class="icon fa fa-calendar"></span></a> </h2>
+	<script>
+	 	var h = window.innerHeight * 0.7;
+       	$('#video-wrap').css('height',h+'px');//fixed height for video
+	</script>
+	<div id="featureEventTile">
+		<h2><a href="http://www.purdue.edu/provost">Feature title <span class="icon fa fa-calendar"></span></a> </h2>
 		<p> <a href="http://www.purdue.edu/provost">Featuring awards and different events, link will be provided here. </a></p>
 	</div>
 </div>
@@ -288,7 +291,7 @@
 			</div>
 			<div id="collapseOne" class="panel-collapse collapse">
 				<div class="panel-body panel-black-body">-->
-	<div class="row">
+	<div class="row linkRow">
 		<div class="linkCol col-sm-4">
 			<h2>Faculty</h2>
 			<ul id="linkCol1">
@@ -322,6 +325,9 @@
 				<li><a href="#">Student Initiatives</a></li>
 			</ul>
 		</div>
+		
+		
+		
 	</div>
 				<!--</div>
 			</div>
