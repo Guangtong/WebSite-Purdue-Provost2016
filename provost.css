@@ -1,7 +1,7 @@
 @media (max-width:768px){   
-    #accordion{
+    /*#accordion{
         display:none;
-    }
+    }*/
 
     #featureEventTile{
         display:none;
@@ -211,7 +211,7 @@
 }
 
 
-
+/*
 #menuContainer .panel-group{
     padding-top:40px;
     margin: 0;
@@ -230,7 +230,6 @@
 #menuContainer .panel-title{
     margin: auto;
     display: block;
-    /*width: 200px;*/
     font-size: 130%;
     text-align: center;
     color: #fff;
@@ -241,12 +240,11 @@
     font-weight: bolder;
     padding-bottom: 30px;
 }
- #menuContainer .panel-body{
-     padding: 0;
-     border: none;
-     background-color: black;
- }
-
+#menuContainer .panel-body{
+    padding: 0;
+    border: none;
+    background-color: black;
+}
 #bounceArrow{
     margin: -15px auto 0 auto;
     z-index: 3;
@@ -272,16 +270,20 @@
   25%, 75% { top:20px; }
   50%      { top:15px; }
   100%     { top:0;}
+}*/
+
+
+
+
+.linkCol{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 0;
 }
-
-
-
-
-
 
 .linkCol h2{
     text-align: center;
-    margin: 40px 5px 20px 5px;
+    margin: 20px 5px 20px 5px;
     padding: 0;
     color: white;
 }
@@ -290,11 +292,10 @@
     list-style-type: none;
     text-align: center;
     padding: 20px 0 20px 0;
-    margin-bottom: 40px;
 }
 
 .linkCol ul li{
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 .linkCol ul a{
@@ -308,15 +309,14 @@
     color: white;
 }
 
-.linkCol #middleMenu{
-    border-left: 2px solid white;
+#linkCol1{
     border-right: 2px solid white;
-
+    margin-right: 20px;
 }
 
-.linkCol.middleMenuCol{
-    padding-left: 0;
-    padding-right: 0;
+#linkCol3{
+    border-left: 2px solid white;
+    margin-left: 20px;
 }
 
 #eventsContainer{

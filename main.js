@@ -3,21 +3,12 @@
 $(window).load(function() {
     
     
-    //accordion
-    $('#collapseOne').on('show.bs.collapse',function(){
-        $('.panel-heading').css('display', 'none');
-        
-        // var columnHeight = $('.linkCol ul#highestMenu').css('height');
-        // console.log(columnHeight);
-        var columnHeight = '330px';
+    var columnHeight = $('#linkCol1').css('height');
 
-        $('.linkCol ul').each(function(){
-            $(this).css('height', columnHeight);
-        });
-
+    $('.linkCol ul').each(function(){
+        $(this).css('height', columnHeight);
     });
 
-    
 
     //video
     var video = $('.mainContent video').get(0);
