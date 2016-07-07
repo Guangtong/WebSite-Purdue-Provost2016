@@ -3,8 +3,11 @@
 $(window).load(function() {
     
     
-    var columnHeight = $('#linkCol1').css('height');
-
+    //var columnHeight = $('#linkCol1').css('Height');
+    //var columnHeight = $('#linkCol1').innerHeight();
+    //cannot have a correct height when hidden at first
+    var columnHeight = '349px';
+    //console.log(columnHeight);
     $('.linkCol ul').each(function(){
         $(this).css('height', columnHeight);
     });
@@ -15,7 +18,7 @@ $(window).load(function() {
     var v=video.currentSrc;
 
     function setSize(){
-        console.log(window.innerWidth);
+        
         if(window.innerWidth<768){ //mobile device < ipad width (768 device)//751
             video.src=''; //show poster
             $('.mainContent video').css('display','none');
@@ -52,6 +55,8 @@ $(window).load(function() {
     setSize();
     
     $(window).resize(setSize);
+    
+    
 
  
 
