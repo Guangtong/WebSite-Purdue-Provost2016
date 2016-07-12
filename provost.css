@@ -1,4 +1,4 @@
-@media (max-width:768px){   
+@media (max-width:767px){   
     .row.linkRow{
         display:none;
     }
@@ -434,6 +434,12 @@
     border-radius: 0;
     
 }
+
+a.tab-init-color{
+    background: #2EAF9B !important;
+}
+
+
 .nav-tabs li.active a, 
 .nav-tabs li a:focus, 
 .nav-tabs li a:hover, 

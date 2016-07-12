@@ -31,6 +31,14 @@ $(window).load(function() {
             $('.rss-box').css('height', 'auto');
             $('.col-4of10').css('height', 'auto');
             $('#eventImage2 img').css('height','auto');
+            
+            $('#left-tab').removeClass('active');
+            $('#right-tab').removeClass('active');
+            $('#events').removeClass('active').removeClass('in');
+            $('#news').removeClass('active').removeClass('in');
+            $('#left-tab a').addClass('tab-init-color');
+            $('#right-tab a').addClass('tab-init-color');
+            
         }else{
             if(video.src != v) {
                 video.src=v; //back to show video
@@ -57,7 +65,26 @@ $(window).load(function() {
     $(window).resize(setSize);
     
     
+    function init_tab() {
+        if(window.innerWidth<768){
+            if ($(this).hasClass('active')){
+                //these operation will be overridden by bootstrap
+                // $('#left-tab').removeClass('active');
+                // $('#right-tab').removeClass('active');
+                // $('#events').removeClass('active').removeClass('in');
+                // $('#news').removeClass('active').removeClass('in');
 
+            }
+            else{
+                $('#left-tab a').removeClass('tab-init-color');
+                $('#right-tab a').removeClass('tab-init-color');
+                
+            }
+        }
+    }
+    
+    $('#left-tab').on('click', init_tab);
+    $('#right-tab').on('click', init_tab);
  
 
 });
