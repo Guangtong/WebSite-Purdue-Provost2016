@@ -45,9 +45,9 @@ coolfind.create_find_div = function()
 	var find_script = document.getElementById('cool_find_script');
 	var find_html = "";
 	var find_div_style = "display: inline-block; vertical-align: middle; z-index:200;";
-	var button_style = "display: inline-block;  min-height: 1.15em; min-width: 1.5em; max-width: 3em; vertical-align: middle; text-align: center; font-size: 1em;"+ // Version 6.0b - Added font-size: 1em; for "button" element to display properly
-		"border: 1px solid black; background: lightgray; cursor: pointer; padding: 1px; margin: 4px; -webkit-user-select:none; -ms-user-select: none;";
-	var menu_style = "background-color: #e5e5e5; display: inline-block;";
+	var button_style = "display: inline-block;  min-height: 1.15em; min-width: 1.5em; max-width: 3em; vertical-align: middle; text-align: center; "+ // Version 6.0b - Added font-size: 1em; for "button" element to display properly
+		"cursor: pointer; margin: 4px; -webkit-user-select:none; -ms-user-select: none;";
+	var menu_style = "display: none;";
 	var input_style = "display: inline; max-width: 55%;"; // Version 6.0b - changed width: 55% to max-width: 55%
 	if (coolfind.lock_button) menu_style += "float: left;";
 	coolfind.addCss(".cool_find_btn {"+button_style+"}"); // Comment out this line if you are using your own css for the buttons
@@ -58,7 +58,7 @@ coolfind.create_find_div = function()
 	if (typeof SVGRect == "undefined")
 		coolfind.find_button_html = "Find";
 	else
-		coolfind.find_button_html = '<svg width="1.15em" height="1.15em" viewbox="0 0 30 30">'+
+		coolfind.find_button_html = '<svg width="1.15em" height="1.15em" style="vertical-align: middle;"viewbox="0 0 30 30">'+
 			'<circle cx="18" cy="12" r="8" stroke="black" stroke-width="2" fill="#fff" fill-opacity="0.4" />'+
 			'<line x1="13" y1="17" x2="0" y2="30" stroke="black" stroke-width="2" />'+
 			'<line x1="10" y1="20" x2="0" y2="30" stroke="black" stroke-width="4" />'+
@@ -68,8 +68,8 @@ coolfind.create_find_div = function()
 	find_div.id = "cool_find_div";
 	find_div.style.cssText = find_div_style;
 	
-	find_html += "<button class='cool_find_btn' id='cool_find_btn'"+ 
-		" title='Find on this page' onclick='coolfind.find_menu(this)' >"+
+	find_html += "<button class='cool_find_btn btn btn-default' id='cool_find_btn'"+ 
+		" title='Find on this page' onclick='coolfind.find_menu(this)'>"+
 		coolfind.find_button_html+"</button> "; 
 
 	if (coolfind.lock_button)
@@ -80,20 +80,20 @@ coolfind.create_find_div = function()
 	}
 	find_script.parentNode.insertBefore(find_div, find_script.nextSibling);
 	
-	find_html += "<span class='cool_find_menu' id='cool_find_menu'>" +
+	find_html += "<div class='cool_find_menu' id='cool_find_menu'>" +
 		'<form onsubmit="return false;" style="display: inline">' +
 		'<input type="search" class="cool_find_input" id="cool_find_text"' +
 		' onchange="coolfind.resettext();" placeholder="Enter text to find">'+
-		'<span id="cool_find_msg"> </span></form>';
+		'</form>' + '<span id="cool_find_msg" style="margin-left:10px; margin-right:10px;"></span>';
 	
-	find_html += "<button class='cool_find_btn'"+ 
+	find_html += "<button class='cool_find_btn btn btn-default' style='margin-left:0; margin-right:0;'"+ 
 		//" style='"+button_style+"'"+ 
 		" title='Find Previous' onclick='coolfind.findprev();'>&#9650;</button>"+
-		"<button class='cool_find_btn' id='cool_find_next'"+ // Version 6.0b - Added id='cool_find_next' for accessibility
+		"<button class='cool_find_btn btn btn-default' id='cool_find_next'"+ // Version 6.0b - Added id='cool_find_next' for accessibility
 		//" style='"+button_style+"'"+
 		" title='Find Next' onclick='coolfind.findit();'>&#9660;</button> ";
 		
-	find_html += "</span>";
+	find_html += "</div>";
 	find_div.innerHTML = find_html;
 	
 	// Check to see if css rules exist for hightlight and find_selected.
@@ -172,7 +172,7 @@ coolfind.highlight = function(word, node)
 	for (node=node.firstChild; node; node=node.nextSibling)
 	{	
 		//console.log(node.nodeName);
-		if (node.nodeType == 3) // text node
+		if (node.nodeType == 3 && node.parentNode.className === "staffName") // text node
 		{
 			var n = node;
 			//console.log(n.nodeValue);
@@ -317,6 +317,20 @@ coolfind.findit = function ()
 }  // end function findit()
 
 
+coolfind.openpanel = function(that){
+	while (that) {
+		if(that.classList && that.classList.contains("panel")){
+        	if(!that.classList.contains("show")){
+        		that.classList.add("show");
+        		that.previousElementSibling.classList.add("active");
+        	}
+        }
+        that = that.parentNode;
+    }
+
+   
+}
+
 coolfind.findnext = function()
 {
 	var current_find;
@@ -349,26 +363,12 @@ coolfind.findnext = function()
 		else 
 			current_find.style.backgroundColor = "orange";
 
-	
-	var p = current_find.parentNode;
-    
-    while (p !== null) {
-        if(p.classList){
-        	console.log(p.classList);
-        	if(p.classList.contains("accordion")){
-        		break; //find p
-        	}
-        }
-        p = p.parentNode;
-    }
-
-    if(p){
-		p.classList.add("active");
-		p.nextElementSibling.classList.add("show");
-    }
+	coolfind.openpanel(current_find);
 			
 	//coolfind.highlights[find_pointer].scrollIntoView(); // Scroll to selected element
 	coolfind.scrollToPosition(coolfind.highlights[coolfind.find_pointer]);
+
+
 	
 } // end coolfind.coolfind.findnext()
 
@@ -409,6 +409,8 @@ coolfind.findprev = function()
 			current_find.className = "find_selected";
 		else 
 			current_find.style.backgroundColor = "orange";
+
+	coolfind.openpanel(current_find);
 			
 	//coolfind.highlights[coolfind.find_pointer].scrollIntoView(); // Scroll to selected element
 	coolfind.scrollToPosition(coolfind.highlights[coolfind.find_pointer]);
@@ -434,7 +436,7 @@ coolfind.checkkey = function(e)
 		// ver 5.1 - 10/17/2014 - Blur on search so keyboard closes on iphone and android
 		if (window.event && event.srcElement.id.match(/cool_find_text/i)) { event.srcElement.blur(); document.getElementById("cool_find_next").focus(); } // Version 6.0b - Added focus to find_next btn
 		else if (e && e.target.id.match(/cool_find_text/i)) { e.target.blur(); document.getElementById("cool_find_next").focus(); } // Version 6.0b - Added focus to find_next btn
-		if (document.activeElement.className != "cool_find_btn") // Version 6.0b - For accessibility, let find_next and find_prev buttons work with keyboard
+		if (!document.activeElement.classList.contains("cool_find_btn")) // Version 6.0b - For accessibility, let find_next and find_prev buttons work with keyboard
 			coolfind.findit(); // call findit() function (like pressing NEXT)	
 	}
 	else if (keycode == 27) // ESC key // Ver 5.1 - 10/17/2014
@@ -457,7 +459,7 @@ coolfind.resettext = function()
 } // end function resettext()
 
 
-coolfind.scrollToPosition = function(field)
+coolfind.scrollToPosition = function(field)   //field is the span DOM
 {  
    // This function scrolls to the DIV called 'edited'
    // It is called with onload.  'edited' only exists if
@@ -483,9 +485,12 @@ coolfind.scrollToPosition = function(field)
 		} 
 		// Only scroll to element if it is out of the current screen
 		if (elemPosX < scrollLeft || elemPosX > scrollRight ||
-			elemPosY < scrollTop || elemPosY > scrollBottom) 
-			window.scrollTo(elemPosX ,elemPosY - 73); 
-			//field.scrollIntoView();
+			elemPosY < scrollTop || elemPosY > scrollBottom) {
+			var find_script = document.getElementById('cool_find_script');
+			window.scrollTo(elemPosX ,elemPosY - find_script.parentNode.offsetHeight); 
+		}
+		
+		//field.scrollIntoView();
 	}
 }  // end function scrollToPosition()
 
