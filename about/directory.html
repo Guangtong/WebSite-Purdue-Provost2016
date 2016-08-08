@@ -1,125 +1,133 @@
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" class="no-js" lang="en">
+
 <head>
-<meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
-<meta charset="utf-8"/>
-<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
-<meta content="width=device-width, user-scalable=no" name="viewport"/>
+	<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+	<meta charset="utf-8" />
+	<meta content="IE=edge" http-equiv="X-UA-Compatible" />
+	<meta content="width=device-width, user-scalable=no" name="viewport" />
 
 
 
 
-<meta content="$description.value" name="description"/>
-<meta content="$keywords.value" name="keywords"/>
-<meta content="$author.value" name="author"/>
+	<meta content="$description.value" name="description" />
+	<meta content="$keywords.value" name="keywords" />
+	<meta content="$author.value" name="author" />
 
-<title>Directory - Office of the Provost - Purdue University</title>
+	<title>Directory - Office of the Provost - Purdue University</title>
 
-<!-- Favicon -->
-<link href="https://www.purdue.edu/purdue/images/favicon.ico" rel="shortcut icon"/>
-<link href="https://www.purdue.edu/purdue/images/icon-iphone.png" rel="apple-touch-icon" sizes="76x76"/>
-<link href="https://www.purdue.edu/purdue/images/icon-ipad.png" rel="apple-touch-icon" sizes="76x76"/>
-<link href="https://www.purdue.edu/purdue/images/icon-iphone-retina.png" rel="apple-touch-icon" sizes="120x120"/>
-<link href="https://www.purdue.edu/purdue/images/icon-ipad-retina.png" rel="apple-touch-icon" sizes="152x152"/>
+	<!-- Favicon -->
+	<link href="https://www.purdue.edu/purdue/images/favicon.ico" rel="shortcut icon" />
+	<link href="https://www.purdue.edu/purdue/images/icon-iphone.png" rel="apple-touch-icon" sizes="76x76" />
+	<link href="https://www.purdue.edu/purdue/images/icon-ipad.png" rel="apple-touch-icon" sizes="76x76" />
+	<link href="https://www.purdue.edu/purdue/images/icon-iphone-retina.png" rel="apple-touch-icon" sizes="120x120" />
+	<link href="https://www.purdue.edu/purdue/images/icon-ipad-retina.png" rel="apple-touch-icon" sizes="152x152" />
 
-<!-- CSS -->
-<link href="https://www.purdue.edu/purdue/css/2015/content/content-1.5.1.css" rel="stylesheet" type="text/css"/>
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"/>
-<style type="text/css">
-	/* Any CSS placed in this text area will be placed inside of a style tag located in the head section of the page. */
+	<!-- CSS -->
+	<link href="https://www.purdue.edu/purdue/css/2015/content/content-1.5.1.css" rel="stylesheet" type="text/css" />
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" />
+	<style type="text/css">
+		/* Any CSS placed in this text area will be placed inside of a style tag located in the head section of the page. */
 
-	#controller-row{
-		padding: 0;
-		margin: auto;
-		height: 73px;
-	}
+		#controller-row {
+			padding: 0;
+			margin: auto;
+		}
 
-	#controller{
-		width: 100%;
-		background: #ffffff;
-		position: relative;
-		top:0;
-		z-index: 99;
-	}
+		#controller {
+			width: 100%;
+			background: #ffffff;
+			position: relative;
+			top: 0;
+			z-index: 99;
+		}
 
-	.staffImg{
-		float: right;
-	}
+		.staffImg {
+			float: right;
+		}
 
-	.maincontent button.accordion {
-		background-color: #eee;
-		color: #b1810b;
-		cursor: pointer;
-		padding: 15px;
-		width: 100%;
-		border: none;
-		text-align: left;
-		outline: none;
-		font-size: 20px;
-		transition: 0.4s;
-		font-weight: bold;
-	}
+		.maincontent button.accordion {
+			background-color: #eee;
+			color: #b1810b;
+			cursor: pointer;
+			padding: 15px;
+			width: 100%;
+			border: none;
+			text-align: left;
+			outline: none;
+			font-size: 20px;
+			transition: 0.4s;
+			font-weight: bold;
+		}
 
-	.maincontent button.accordion.active, button.accordion:hover {
-		background-color: #ddd;
-	}
+		.maincontent button.accordion.active,
+		button.accordion:hover {
+			background-color: #ddd;
+		}
 
-	.maincontent button.accordion:after {
-		content: '\02795';
-		font-size: 13px;
-		color: #777;
-		float: right;
-		margin-left: 5px;
-	}
+		.maincontent button.accordion:after {
+			content: '\02795';
+			font-size: 13px;
+			color: #777;
+			float: right;
+			margin-left: 5px;
+		}
 
-	.maincontent button.accordion.active:after {
-		content: "\2796";
-	}
+		.maincontent button.accordion.active:after {
+			content: "\2796";
+		}
 
-	.maincontent .panel {
-		padding: 0 18px;
-		background-color: white;
-		max-height: 0;
-		overflow: hidden;
-		transition: 0.6s ease-in-out;
-		opacity: 0;
-	}
+		.maincontent .panel {
+			padding: 0 18px;
+			background-color: white;
+			max-height: 0;
+			overflow: hidden;
+			transition: 0.6s ease-in-out;
+			opacity: 0;
+		}
 
-	.maincontent .panel.show {
-		opacity: 1;
-		max-height: none;
+		.maincontent .panel.show {
+			opacity: 1;
+			max-height: none;
+		}
 
-	}
-	.maincontent h4 {
-		color:#b1810b;
-	}
+		.maincontent h4 {
+			color: #b1810b;
+		}
 
-	.maincontent button.btn{
-		margin: 20px 10px;
-	}
+		#expand-button, #collapse-button{
+			margin: 10px 0;
+		}
 
-	.maincontent .scrollup{
-		background: url('../images/uparrow.png') no-repeat;
-		width: 60px;
-		height: 60px;
-		position:fixed;
-		bottom:30px;
-		right:20px;
-		display:none;
-		text-indent:-9999px;
-	}
-</style>
-<!--Individual page css -->
+		#collapse-button{
+			margin-right:10px;
+		}
 
-<!-- Javascript-->
-<script async="true" src="https://www.purdue.edu/purdue/globals/js/modernizr-1.5.min.js" type="text/javascript"></script>
-<script src="https://www.purdue.edu/purdue/js/jquery-1.10.2.min.js" type="text/javascript"></script>
-<script src="https://www.purdue.edu/assets/globals/js/google_jquery_link_tracking.js" type="text/javascript"></script>
+		 #cool_find_menu input, #cool_find_menu button{
+			margin: 10px 0;
+		}
+		.maincontent .scrollup {
+			background: url('../images/uparrow.png') no-repeat;
+			width: 60px;
+			height: 60px;
+			position: fixed;
+			bottom: 30px;
+			right: 20px;
+			display: none;
+			text-indent: -9999px;
+		}
+	</style>
+	<!--Individual page css -->
 
+	<!-- Javascript-->
+	<script async="true" src="https://www.purdue.edu/purdue/globals/js/modernizr-1.5.min.js" type="text/javascript"></script>
+	<script src="https://www.purdue.edu/purdue/js/jquery-1.10.2.min.js" type="text/javascript"></script>
+	<script src="https://www.purdue.edu/assets/globals/js/google_jquery_link_tracking.js" type="text/javascript"></script>
+	<script src="find6.js" type="text/javascript">
+	</script>
 
-<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-<!--[if lt IE 9]>
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
 	<script src="//www.purdue.edu/purdue/js/html5shiv.js"></script>
 	<script src="//www.purdue.edu/purdue/js/respond.min.js"></script>
 	<![endif]-->
@@ -128,6 +136,7 @@
 
 
 </head>
+
 <body>
 	<!-- Begin Gold Bar -->
 	<div class="navbar navbar-inverse goldbar" role="navigation">
@@ -138,8 +147,8 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span> Quick Links
 				</button>
-				<button class="navbar-toggle search right" data-target="#search" data-toggle="collapse" type="button"> 
-					<i class="fa fa-search fa-lg"></i> 
+				<button class="navbar-toggle search right" data-target="#search" data-toggle="collapse" type="button">
+					<i class="fa fa-search fa-lg"></i>
 				</button>
 			</div>
 			<div class="collapse navbar-collapse right search" id="search">
@@ -161,7 +170,8 @@
 			<div class="collapse navbar-collapse gold">
 				<ul class="nav navbar-nav information">
 					<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Find Info For <b class="caret"></b></a>
-						<ul class="dropdown-menu"><p class="hide">Find Info For</p>
+						<ul class="dropdown-menu">
+							<p class="hide">Find Info For</p>
 							<li><a class="findInfoLink" href="http://www.purdue.edu/purdue/academics/index.php">Academics</a></li>
 							<li><a class="findInfoLink" href="http://www.purdue.edu/purdue/admissions/index.php">Admissions</a></li>
 							<li><a class="findInfoLink" href="http://www.purdue.edu/purdue/current_students/index.php">Current Students</a></li>
@@ -174,7 +184,8 @@
 						</ul>
 					</li>
 				</ul>
-				<ul class="nav navbar-nav right quicklinks"><p class="hide">Quick Links</p>
+				<ul class="nav navbar-nav right quicklinks">
+					<p class="hide">Quick Links</p>
 					<li><a href="http://www.purdue.edu/purdue/admissions/index.php#linksRow">Apply</a></li>
 					<li><a href="http://www.purdue.edu/newsroom/index.html">News</a></li>
 					<li><a href="http://www.purdue.edu/president/index.html">President</a></li>
@@ -192,7 +203,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="logo col-lg-2 col-md-3 col-sm-3 col-xs-12">
-					<a href="//www.purdue.edu"><img alt="Purdue University" src="//www.purdue.edu/purdue/images/logo.png"/></a>
+					<a href="//www.purdue.edu"><img alt="Purdue University" src="//www.purdue.edu/purdue/images/logo.png" /></a>
 				</div>
 				<div class="department col-lg-10 col-md-9 col-sm-9 col-xs-12">
 					<a href="../index.html">Office of the Provost</a>
@@ -216,8 +227,6 @@
 			<div class="collapse navbar-collapse black">
 				<ul class="nav navbar-nav">
 					<li class="first"><a href="../index.html">Home</a></li>
-
-
 
 
 
@@ -346,7 +355,11 @@
 	<div class="breadcrumb">
 		<div class="container">
 			<div class="row">
-				<div id="breadcrumbs"><ol class="col-lg-12 col-md-12 col-sm-12"><li><a href="meetTheProvost.html">about</a></li></ol></div>
+				<div id="breadcrumbs">
+					<ol class="col-lg-12 col-md-12 col-sm-12">
+						<li><a href="meetTheProvost.html">about</a></li>
+					</ol>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -360,759 +373,1026 @@
 
 					<div class="row" id="controller-row">
 						<div id="controller">
-							
+							<!-- class="col-md-6 col-xs-12 left	 -->
 
-							<button class="btn btn-default" id="expand-button">Expand All Categories</button> 
+							<button class="btn btn-default" id="expand-button">Expand All Categories</button>
 							<button class="btn btn-default" id="collapse-button">Collapse All Categories</button>
 
+							<div id="cool_find_menu" class="cool_find_menu" style="display: inline-block;">
+								<form onsubmit="return false;" style="display: inline">
 
-							<script type="text/javascript" id="cool_find_script" src="find6.js"> </script>
+									<input type="text" class="cool_find_input" id="cool_find_text" onchange="coolfind.resettext();" placeholder="Enter name to find" />
+
+								</form>
+								<div style="display: inline-block;">
+									<span id="cool_find_msg"></span>
+									<button class="cool_find_btn btn btn-default" title="Find Previous" onclick="coolfind.findprev();">▲</button>
+									<button class="cool_find_btn btn btn-default" id="cool_find_next" title="Find Next" onclick="coolfind.findit();">▼</button>
+								</div>
+							</div>	
 						</div>
-					</div>
 
+
+
+
+					</div>
 
 					<button class="accordion">Vice Provosts</button>
 					<div class="panel">
 						<div class="row">
-							<div class="staffImg1 noGutter col-md-3 col-xs-12"><img alt="Image of Steve Abel" height="185" src="../images_people/Steve_Abel.png" width="125"/></div>
+							<div class="staffImg1 noGutter col-md-3 col-xs-12"><img alt="Image of Steve Abel" height="185" src="../images_people/Steve_Abel.png" width="125" /></div>
 							<div class="col-md-6 col-xs-12">
 								<h4 class="staffName">Steve Abel</h4>
-								<p><strong>Associate Provost of Engagement</strong> <br/> <span>(765) 494-2744</span> <br/> <a href="mailto:abels@purdue.edu">abels@purdue.edu</a> <br/> <a href="staff/Abel_Steve.html">Bio</a> <br/> <a href="speechRequest.php">Request a Speech</a> <br/><strong>Assistant:</strong><span class="staffName">Lisa Duncan</span> <br/>(765) 494-0899<br/> <a href="jrward@purdue.edu">lduncan@purdue.edu</a></p>
-							</div>
-						</div>
-						<div class="row">
-							<div class="staffImg1 noGutter col-md-3 col-xs-12"><img alt="Joe Camp" height="185" src="../images_people/photo-campJoe_thumb.jpg" width="125"/></div>
-							<div class="col-md-6 col-xs-12">
-								<h4 class="staffName">Joseph W. Camp Jr., PhD</h4>
-								<p><strong>Secretary of Faculties</strong> <br/> Professor of Veterinary Parasitology <br/>(765) 494-2585 or (765) 496-2463 <br/> <a href="mailto:jcamp@purdue.edu">jcamp@purdue.edu</a> <br/> <a href="staff/Camp_Joe.html">Bio</a> <br/> <a href="speechRequest.php">Request a Speech</a> <br/><strong>Assistant:</strong><span class="staffName">Se'Andra Johnson</span><br/>(765)494-6398<br/> <a href="sddonald@purdue.edu">sddonald@purdue.edu</a></p>
-							</div>
-						</div>
-						<div class="row">
-							<div class="staffImg1 noGutter col-md-3 col-xs-12"><img alt="Frank J. Dooley" height="185" src="../images_people/photo-dooleyFrank_thumb.jpg" width="125"/></div>
-							<div class="col-md-6 col-xs-12">
-								<h4 class="staffName">Frank J. Dooley, PhD</h4>
-								<p><strong>Vice Provost for Teaching and Learning</strong> <br/> Professor of Agriculture Economics <br/> (765) 494-0615 <br/> <a href="mailto:dooleyf@purdue.edu">dooleyf@purdue.edu</a> <br/> <a href="staff/Dooley_Frank.html">Bio</a> <br/> <a href="speechRequest.php">Request a Speech</a> <br/><strong>Assistant:</strong><span class="staffName">Shelly Dunk</span><br/>(765) 494-0615 <br/> <a href="sdunk@purdue.edu">sdunk@purdue.edu</a></p>
-							</div>
-						</div>
-						<div class="row">
-							<div class="staffImg1 noGutter col-md-3 col-xs-12"><img alt="Peter J. Hollenbeck" height="185" src="../images_people/photo-hollenbeckPeter_thumb.jpg" width="125"/></div>
-							<div class="col-md-6 col-xs-12">
-								<h4 class="staffName">Peter J. Hollenbeck</h4>
-								<p><strong>Vice Provost for Faculty Affairs</strong> <br/>(765) 494-2948 <br/> <a href="mailto:phollenb@purdue.edu">phollenb@purdue.edu</a> <br/> <a href="staff/Hollenbeck_Peter.html">Bio</a> <br/> <a href="speechRequest.php">Request a Speech</a> <br/><strong>Assistant:</strong><span class="staffName">Paula Hall</span><br/>(765)494-0665<br/> <a href="paulahall@purdue.edu">paulahall@purdue.edu</a></p>
-							</div>
-						</div>
-						<div class="row">
-							<div class="staffImg1 noGutter col-md-3 col-xs-12"><img alt="Pam Horne" height="185" src="../images_people/photo-hornePam_thumb.jpg" width="125"/></div>
-							<div class="col-md-6 col-xs-12">
-								<h4 class="staffName">Pamela T. Horne</h4>
-								<p><strong>Vice Provost for Enrollment</strong> <br/>(765) 494-2948 <br/> <a href="mailto:phollenb@purdue.edu">phorne@purdue.edu</a> <br/> <a href="staff/Horne_Pam.html">Bio</a> <br/> <a href="speechRequest.php">Request a Speech</a> <br/><strong>Assistant:</strong><span class="staffName">Dana Beck </span><br/>(765) 494-9116<br/> <a href="dsbeck@purdue.edu">dsbeck@purdue.edu</a></p>
-							</div>
-						</div>
-						<div class="row">
-							<div class="staffImg1 noGutter col-md-3 col-xs-12"><img alt="Connie L. Lapinskas" height="185" src="../images_people/photo-lapinskasConnie_thumb.jpg" width="125"/></div>
-							<div class="col-md-6 col-xs-12">
-								<h4 class="staffName">Connie L. Lapinskas</h4>
-								<p><strong>Assistant Provost for Finance and Administration</strong> <br/>(765) 494-7537 <br/> <a href="mailto:clapinsk@purdue.edu">clapinsk@purdue.edu</a> <br/> <a href="staff/Lapinskas_Connie.html">Bio</a> <br/> <a href="speechRequest.php">Request a Speech</a> <br/><strong>Assistant:</strong><span class="staffName">Patti Keen,</span> <a href="keenp@purdue.edu">keenp@purdue.edu</a></p>
-							</div>
-						</div>
-						<div class="row">
-							<div class="staffImg1 noGutter col-md-3 col-xs-12"><img alt="Beth McCuskey" height="185" src="../images_people/photo-mcCuskeyBeth_thumb.jpg" width="125"/></div>
-							<div class="col-md-6 col-xs-12">
-								<h4 class="staffName">Beth McCuskey</h4>
-								<p><strong>Vice Provost for Student Life</strong> <br/>(765) 496-0341 <br/> <a href="mailto:bmccuske@purdue.edu">bmccuske@purdue.edu</a> <br/> <a href="staff/McCuskey_Beth.html">Bio</a> <br/> <a href="speechRequest.php">Request a Speech</a> <br/><strong>Assistant:</strong><span class="staffName">Melissa Wilson </span><br/>(765) 496-0341<br/> <a href="mlwilson@purdue.edu">mlwilson@purdue.edu</a></p>
-							</div>
-						</div>
-						<div class="row">
-							<div class="staffImg1 noGutter col-md-3 col-xs-12"><img alt="Deborah Rupp" height="185" src="../images_people/Deborah_Rupp.jpeg" width="125"/></div>
-							<div class="col-md-6 col-xs-12">
-								<h4 class="staffName">Deborah E. Rupp</h4>
-								<p><strong>Research Integrity Officer</strong> <br/> <strong>William C. Byham Chair in Industrial Organizational Psychology</strong> <br/>(765) 496-6670 <br/> <a href="mailto:ruppd@purdue.edu">ruppd@purdue.edu</a> <br/> <a href="staff/Rupp_Deborah.html">Bio</a> <br/> <a href="speechRequest.php">Request a Speech</a> <br/><strong>Assistant:</strong><span class="staffName">Paula Hall</span><br/>(765) 494-0665<br/> <a href="paulahall@purdue.edu">paulahall@purdue.edu</a></p>
-							</div>
-						</div>
-						<div class="row">
-							<div class="staffImg1 noGutter col-md-3 col-xs-12"><img alt="G. Christine Taylor" height="185" src="../images_people/photo-taylorChristine_thumb.jpg" width="125"/></div>
-							<div class="col-md-6 col-xs-12">
-								<h4 class="staffName">G. Christine Taylor, PhD</h4>
-								<p><strong>Vice Provost for Diversity and Chief Diversity Officer</strong> <br/>(765) 494-6969 <br/> <a href="mailto:taylorgc@purdue.edu">taylorgc@purdue.edu</a> <br/> <a href="staff/Taylor_Christine.html">Bio</a> <br/> <a href="speechRequest.php">Request a Speech</a> <br/><strong>Assistant:</strong><span class="staffName">Terri Donald, </span><a href="tdonald@purdue.edu">tdonald@purdue.edu</a></p>
-							</div>
-						</div>
-						<div class="row">
-							<div class="staffImg1 noGutter col-md-3 col-xs-12"><img alt="Candiss Vibert" height="185" src="../images_people/photo-vibbertCandiss_thumb.jpg" width="125"/></div>
-							<div class="col-md-6 col-xs-12">
-								<h4 class="staffName">Candiss B. Vibbert</h4>
-								<p><strong>Associate Provost for Special Initiatives</strong> <br/>(765) 494-7929 <br/> <a href="mailto:ruppd@purdue.edu">vibbert@purdue.edu</a> <br/> <a href="staff/Vibbert_Candiss.html">Bio</a> <br/> <a href="speechRequest.php">Request a Speech</a> <br/><strong>Assistant:</strong><span class="staffName">Mary Dawson </span><br/>(765) 494-5429<br/> <a href="mdawson@purdue.edu">mdawson@purdue.edu</a></p>
-							</div>
-						</div>
-					</div>
-					<button class="accordion">Diversity &amp; Inclusion</button>
-					<div class="panel">
-						<div class="row"><br/>
-							<div class="noGutter col-md-3 col-xs-12"></div>
-							<div class="staffImg noGutter col-md-3 col-xs-12"><img alt="Debasish Dutta" height="185" src="../images_people/photo-duttaDebasish_thumb.jpg" width="125"/></div>
-							<div class="col-md-6 col-xs-12">
-								<h4 class="staffName">Debasish Dutta, PhD</h4>
-								<p><strong>Provost and Executive Vice President for Academic Affairs and Diversity</strong> <br/>Diversity Leadership Team <br/> <a href="mailto:dutta@purdue.edu">dutta@purdue.edu</a> <br/> <a href="meetTheProvost.html">Meet the Provost</a> <br/><strong>Assistant:</strong><span class="staffName">Carla Reeves </span><br/>(765) 494-6835<br/> <a href="reeves@purdue.edu">reeves@purdue.edu</a></p>
-							</div>
-						</div>
-						<div class="row">
-							<div class="noGutter col-md-3 col-xs-12"></div>
-							<div class="staffImg noGutter col-md-3 col-xs-12"><img alt="Ximena Arriaga" height="185" src="../images_people/photo-ximena.jpg" width="125"/></div>
-							<div class="col-md-6 col-xs-12">
-								<h4 class="staffName">Ximena Arriaga, PhD</h4>
-								<p><strong>Provost Fellow on Diversity</strong> <br/>Diversity Leadership Team <br/> <a href="mailto:arriaga@purdue.edu">arriaga@purdue.edu</a></p>
-							</div>
-						</div>
-						<div class="row">
-							<div class="noGutter col-md-3 col-xs-12"></div>
-							<div class="staffImg noGutter col-md-3 col-xs-12"><img alt="Venetria Patton" height="185" src="../images_people/photo-venetria.jpg" width="125"/></div>
-							<div class="col-md-6 col-xs-12">
-								<h4 class="staffName">Venetria Patton, PhD</h4>
-								<p><strong>Provost Fellow on Diversity</strong> <br/>Diversity Leadership Team <br/> <a href="mailto:vpatton@purdue.edu">vpatton@purdue.edu</a></p>
-							</div>
-						</div>
-						<div class="row">
-							<div class="noGutter col-md-3 col-xs-12"></div>
-							<div class="staffImg noGutter col-md-3 col-xs-12"><img alt="Mark Smith" height="185" src="../images_people/photo-smithMark_thumb.jpg" width="125"/></div>
-							<div class="col-md-6 col-xs-12">
-								<h4 class="staffName">Mark Smith, PhD</h4>
-								<p><strong>Dean of the Graduate School</strong> <br/>Diversity Leadership Team <br/> <a href="mailto:mjts@purdue.edu">mjts@purdue.edu</a><br/><strong>Assistant:</strong><span class="staffName">asey Hollignsworth,</span> <a href="chollingsworth@purdue.edu">chollingsworth@purdue.edu</a></p>
-							</div>
-						</div>
-					</div>
-					<button class="accordion">Faculty Affairs</button>
-					<div class="panel">
-						<div class="row">
-							<div class="staffImg1 noGutter col-md-3 col-xs-12"><img alt="Peter Hollenbeck" height="185" src="../images_people/photo-hollenbeckPeter_thumb.jpg" width="125"/></div>
-							<div class="col-md-6 col-xs-12">
-								<h4 class="staffName">Peter Hollenbeck, PhD</h4>
-								<p><strong>Vice Provost for Faculty Affairs</strong> <br/> (765) 494-2948 <br/> <a href="mailto:phollenb@purdue.edu">phollenb@purdue.edu</a><br/> <a href="staff/Hollenbeck_Peter.html">Bio</a> <br/><strong>Assistant:</strong><span class="staffName">Paula Hall</span><br/>(765) 494-0665<br/> <a href="paulahall@purdue.edu">paulahall@purdue.edu</a></p>
-							</div>
-						</div>
-						<div class="row">
-							<div class="staffImg1 noGutter col-md-3 col-xs-12"><img alt="joe camp" height="185" src="../images_people/photo-campJoe_thumb.jpg" width="125"/></div>
-							<div class="col-md-6 col-xs-12">
-								<h4 class="staffName">Joseph Camp Jr., PhD</h4>
-								<p><strong>Secretary of Faculties</strong> <br/> Professor of Veterinary Parasitology <br/> (765) 496-1970 or (765) 496-2463 <br/> <a href="mailto:jcamp@purdue.edu">jcamp@purdue.edu</a> <br/> <a href="staff/Camp_Joe.html">Bio</a> <br/><strong>Assistant:</strong><span class="staffName">Se'Andra Johnson, </span><a href="sddonald@purdue.edu">sddonald@purdue.edu</a></p>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-md-3 col-xs-12"></div>
-							<div class="col-md-6 col-xs-12">
-								<h4 class="staffName">Annie Jarrard</h4>
-								<p><strong>Faculty Affairs Program Manager</strong> <br/> (765) 494-5425 <br/> <a href="mailto:ajarrard@purdue.edu">ajarrard@purdue.edu</a></p>
-							</div>
-						</div>
-					</div>
-					<button class="accordion">Office of Engagement</button>
-					<div class="panel">
-						<div class="row">
-							<div class="noGutter col-md-3 col-xs-12"></div>
-							<div class="staffImg noGutter col-md-3 col-xs-12"><img alt="Steven Abel" height="185" src="../images_people/Steve_Abel.png" width="125"/></div>
-							<div class="col-md-6 col-xs-12">
-								<h4 class="staffName">Steve Abel</h4>
-								<p><strong> Associate Provost for Engagement</strong> <br/> (765) 494-2744 <br/> <a href="mailto:abels@purdue.edu">abels@purdue.edu</a> <br/> <a href="staff/Abel_Steve.html">Bio</a> <br/><strong>Assistant:</strong><span class="staffName">Lisa Duncan </span><br/>(765) 494-0899<br/> <a href="lduncan@purdue.edu">lduncan@purdue.edu</a></p>
-							</div>
-						</div>
-						<div class="row">
-							<div class="noGutter col-md-3 col-xs-12"></div>
-							<div class="staffImg noGutter col-md-3 col-xs-12"><img alt="Paul Ainslie" height="185" src="../images_people/photo-paulAinslie.jpg" width="125"/></div>
-							<div class="col-md-6 col-xs-12">
-								<h4 class="staffName">Paul Ainslie</h4>
-								<p><strong> Managing Director, I-STEM Resource Network</strong> <br/> (765) 494-2757 <br/> <a href="mailto:painslie@purdue.edu">painslie@purdue.edu</a></p>
-							</div>
-						</div>
-						<div class="row">
-							<div class="noGutter col-md-3 col-xs-12"></div>
-							<div class="staffImg noGutter col-md-3 col-xs-12"><img alt="Barb Alder " height="185" src="../images_people/barb1.jpg" width="125"/></div>
-							<div class="col-md-6 col-xs-12">
-								<h4 class="staffName">Barbara J. Alder</h4>
-								<p><strong>Director, Office of Engagement, Indianapolis</strong> <br/>(317) 632-0714 <br/> <a href="mailto:balder@purdue.edu">balder@purdue.edu</a></p>
-							</div>
-						</div>
-						<div class="row">
-							<div class="noGutter col-md-3 col-xs-12"></div>
-							<div class="staffImg noGutter col-md-3 col-xs-12"><img alt="Lionel Beaulieu" height="185" src="../images_people/photo-beaulieu.jpg" width="125"/></div>
-							<div class="col-md-6 col-xs-12">
-								<h4 class="staffName">Lionel "Bo" Beaulieu</h4>
-								<p><strong> Director, Center for Regional Development</strong> <br/> (765) 494-7273 <br/> <a href="mailto:ljb@purdue.edu">ljb@purdue.edu</a></p>
-							</div>
-						</div>
-						<div class="row">
-							<div class="noGutter col-md-3 col-xs-12"></div>
-							<div class="staffImg noGutter col-md-3 col-xs-12"><img alt="Dave McKinnis" height="185" src="../images_people/photo-bonora.jpg" width="125"/></div>
-							<div class="col-md-6 col-xs-12">
-								<h4 class="staffName">Nick Bonora</h4>
-								<p><strong>Director, Purdue Conference</strong> <br/> (765) 494-0234 <br/> <a href="mailto:nbonora@purdue.edu">nbonora@purdue.edu</a></p>
-							</div>
-						</div>
-						<div class="row">
-							<div class="noGutter col-md-3 col-xs-12"></div>
-							<div class="staffImg noGutter col-md-3 col-xs-12"><img alt="Jason Henderson" height="185" src="../images_people/photo-henderson.png" width="125"/></div>
-							<div class="col-md-6 col-xs-12">
-								<h4 class="staffName">Jason Henderson</h4>
-								<p><strong> Associate Dean &amp; Director </strong> <br/> (765) 494-8489 <br/> <a href="mailto:jhenderson@purdue.edu">jhenderson@purdue.edu</a></p>
-							</div>
-						</div>
-						<div class="row">
-							<div class="noGutter col-md-3 col-xs-12"></div>
-							<div class="staffImg noGutter col-md-3 col-xs-12"><img alt="Sean Ryan" height="185" src="../images_people/photo-seanRyan.jpg" width="125"/></div>
-							<div class="col-md-6 col-xs-12">
-								<h4 class="staffName">Sean Ryan</h4>
-								<p><strong> Director, Office of Engagement, Fort Wayne </strong> <br/> (260) 399-1662 <br/> <a href="mailto:ryans@ipfw.edu">ryans@ipfw.edu</a></p>
-							</div>
-						</div>
-						<div class="row">
-							<div class="noGutter col-md-3 col-xs-12"></div>
-							<div class="staffImg noGutter col-md-3 col-xs-12"><img alt="Tim Sanders" height="185" src="../images_people/photo-timSanders.jpg" width="125"/></div>
-							<div class="col-md-6 col-xs-12">
-								<h4 class="staffName">Tim Sanders</h4>
-								<p><strong> Director of Engagement Office Purdue Northwest</strong> <br/> (219) 785-5500 <br/> <a href="mailto:tjsander@pnc.edu">tjsanders@pnc.edu</a></p>
-							</div>
-						</div>
-						<div class="row">
-							<div class="noGutter col-md-3 col-xs-12"></div>
-							<div class="staffImg noGutter col-md-3 col-xs-12"><img alt="Danny White" height="185" src="../images_people/photo-danny.jpg" width="125"/></div>
-							<div class="col-md-6 col-xs-12">
-								<h4 class="staffName">Danny J. White</h4>
-								<p><strong> Manager, Purdue Motorsports, Indianapolis</strong> <br/> (317) 632-0716 <br/> <a href="mailto:white66@purdue.edu">white66@purdue.edu</a></p>
-							</div>
-						</div>
-						<div class="row">
-							<div class="noGutter col-md-3 col-xs-12"></div>
-							<div class="staffImg noGutter col-md-3 col-xs-12"><img alt="Heather Oakley" height="185" src="../images_people/photo-oakleyH.jpg" width="125"/></div>
-							<div class="col-md-6 col-xs-12">
-								<h4 class="staffName">Heather Oakley</h4>
-								<p><strong> Office of Engagement - Financial</strong> <br/> (765) 494-2895 <br/> <a href="mailto:oakley@purdue.edu">oakley@purdue.edu</a></p>
-							</div>
-						</div>
-						<div class="row">
-							<div class="noGutter col-md-3 col-xs-12"></div>
-							<div class="staffImg noGutter col-md-3 col-xs-12"><img alt="Julie Gibbs" height="185" src="../images_people/photo-julieGibbs.jpg" width="125"/></div>
-							<div class="col-md-6 col-xs-12">
-								<h4 class="staffName">Julie Gibbs</h4>
-								<p><strong> Administrative Assistant</strong> <br/> (765) 494-2744 <br/> <a href="mailto:jagibbs@purdue.edu">jagibbs@purdue.edu</a></p>
-							</div>
-						</div>
-						<div class="row">
-							<div class="noGutter col-md-3 col-xs-12"></div>
-							<div class="staffImg noGutter col-md-3 col-xs-12"><img alt="Lisa Duncan" height="185" src="../images_people/photo-duncanLisa.jpg" width="125"/></div>
-							<div class="col-md-6 col-xs-12">
-								<h4 class="staffName">Lisa Duncan</h4>
-								<p><strong> Administrative Assistant</strong> <br/> (765) 494-0899 <br/> <a href="mailto:llduncan@purdue.edu">lduncan@purdue.edu</a></p>
-							</div>
-						</div>
-					</div>
-					<button class="accordion">Student Academic Affairs</button>
-					<div class="panel">
-						<div class="row">
-							<div class="staffImg1 noGutter col-md-3 col-xs-12"><img alt="Frank J. Dooley" height="185" src="../images_people/photo-dooleyFrank_thumb.jpg" width="125"/></div>
-							<div class="staffInfo noGutterRight col-md-6 col-xs-12">
-								<h4 class="staffName">Frank J. Dooley</h4>
-								<p><strong>Vice Provost for Teaching and Learning</strong> <br/> Professor of Agriculture Economics <br/> (765) 494-0615 <br/> <a href="mailto:dooleyf@purdue.edu">dooleyf@purdue.edu</a> <br/> <a href="staff/Dooley_Frank.html">Bio</a> <br/><strong>Assistant:</strong><span class="staffName">Shelly Dunk </span><br/>(765) 494-0615<br/> <a href="sdunk@purdue.edu">sdunk@purdue.edu</a></p>
-							</div>
-						</div>
-						<div class="row">
-							<div class="staffImg1 noGutter col-md-3 col-xs-12"><img alt="Jon Harbor" height="185" src="../images_people/photo-harborJon_thumb.jpg" width="125"/></div>
-							<div class="staffInfo noGutterRight col-md-6 col-xs-12">
-								<h4 class="staffName">Jon Harbor</h4>
-								<p><strong>Associate Vice Provost for Teaching and Learning</strong> <br/>Director of Digital Education <br/>Professor of Environmental Geosciences <br/> <a href="mailto://jharbor@purdue.edu">jharbor@purdue.edu</a> <br/><strong>Assistant:</strong><span class="staffName">Kathy Greenwood </span><br/>(765) 496-2321<br/> <a href="kagreen@purdue.edu">kagreen@purdue.edu</a></p>
-							</div>
-						</div>
-						<div class="row">
-							<div class="staffImg1 noGutter col-md-3 col-xs-12"><img alt="Pam Horne" height="185" src="../images_people/photo-hornePam_thumb.jpg" width="125"/></div>
-							<div class="staffInfo noGutterRight col-md-6 col-xs-12">
-								<h4 class="staffName">Pam Horne</h4>
-								<p><strong>Vice Provost for Enrollment Management</strong> <br/> (765) 494-9116 <br/> <a href="mailto:phorne@purdue.edu">phorne@purdue.edu</a><br/> <a href="staff/Horne_Pam.html">Bio</a> <br/><strong>Assistant:</strong><span class="staffName">Dana Beck</span> <br/>(765) 494-9116<br/> <a href="dsbeck@purdue.edu">dsbeck@purdue.edu</a></p>
-							</div>
-						</div>
-						<div class="row">
-							<div class="staffImg1 noGutter col-md-3 col-xs-12"><img alt="Beth McCuskey" height="185" src="../images_people/photo-mcCuskeyBeth_thumb.jpg" width="125"/></div>
-							<div class="staffInfo noGutterRight col-md-6 col-xs-12">
-								<h4 class="staffName">Beth McCuskey</h4>
-								<p><strong>Vice Provost for Student Life</strong> <br/> (765) 496-0341 <br/> <a href="mailto:bmccuske@purdue.edu">bmccuske@purdue.edu</a><br/> <a href="staff/McCuskey_Beth.html">Bio</a> <br/><strong>Assistant:</strong><span class="staffName">Melissa Wilson</span> <br/>(765) 496-0341<br/> <a href="mlwilson@purdue.edu">mlwilson@purdue.edu</a></p>
-							</div>
-						</div>
-					</div>
-					<button class="accordion">Colleges and Deans</button>
-					<div class="panel"><center>
-						<h3>College of Agriculture</h3>
-						<hr align="center" color="#B1810B" style="border-top-color: #b1810b;" width="50%"/></center>
-						<div class="row">
-							<div class="noGutter col-md-3 col-xs-12"></div>
-							<div class="staffImg noGutter col-md-3 col-xs-12"><img alt="Jay T. Akridge" height="185" src="../images_people/photo-akridgeJay_thumb .jpg" width="125"/></div>
-							<div class="col-md-6 col-xs-12">
-								<h4 class="staffName">Jay T. Akridge</h4>
-								<p><strong>Dean</strong> <br/> (765) 494-8391 <br/> <a href="mailto:akridge@purdue.edu">akridge@purdue.edu</a></p>
-								<p><strong>Assistant:</strong><span class="staffName">Ruth Ann Weiderhaft <br/> (765) 494-8391</span> <br/> <a href="mailto:weiderhaft@purdue.edu">weiderhaft@purdue.edu</a></p>
-								<p><a href="https://ag.purdue.edu/pages/default.aspx">College of Agriculture Site</a></p>
-							</div>
-						</div>
-						<center>
-							<h3>College of Education</h3>
-							<hr align="center" color="#B1810B" style="border-top-color: #b1810b;" width="50%"/></center>
-							<div class="row">
-								<div class="noGutter col-md-3 col-xs-12"></div>
-								<div class="staffImg noGutter col-md-3 col-xs-12"><img alt="Maryann Santos" height="185" src="../images_people/photo-baronaMaryann_thumb.jpg" width="125"/></div>
-								<div class="col-md-6 col-xs-12">
-									<h4 class="staffName">Maryann Santos</h4>
-									<p><strong>Dean</strong> <br/> (765) 494-9739 <br/> <a href="mailto:msdb@purdue.edu">msdb@purdue.edu</a></p>
-									<p><strong>Assistant:</strong><span class="staffName">Rita Neidlinger <br/> (765) 494-9739 </span><br/> <a href="mailto:rneidlin@purdue.edu">rneidlin@purdue.edu</a></p>
-									<p><a href="http://www.education.purdue.edu/">College of Education Site</a></p>
+								<p><strong>Associate Provost of Engagement</strong>
+									<br/> <span>(765) 494-2744</span>
+									<br/> <a href="mailto:abels@purdue.edu">abels@purdue.edu</a>
+									<br/> <a href="staff/Abel_Steve.html">Bio</a>
+									<br/> <a href="speechRequest.php">Request a Speech</a>
+									<br/><strong>Assistant:</strong><span class="staffName">Lisa Duncan</span>
+									<br/>(765) 494-0899
+									<br/> <a href="jrward@purdue.edu">lduncan@purdue.edu</a></p>
 								</div>
 							</div>
-							<center>
-								<h3>College of Engineering</h3>
-								<hr align="center" color="#B1810B" style="border-top-color: #b1810b;" width="50%"/></center>
-								<div class="row">
-									<div class="noGutter col-md-3 col-xs-12"></div>
-									<div class="staffImg noGutter col-md-3 col-xs-12"><img alt="Leah Jamieson" height="185" src="../images_people/photo-jamiesonLeah_thumb.jpg" width="125"/></div>
-									<div class="col-md-6 col-xs-12">
-										<h4 class="staffName">Leah Jamieson</h4>
-										<p><strong>Dean</strong> <br/> (765) 494-5346 <br/> <a href="mailto:lhj@purdue.edu">lhj@purdue.edu</a></p>
-										<p><strong>Assistant:</strong><span class="staffName">Kristy Smith </span><br/> (765) 494-5346 <br/> <a href="mailto:kjs@purdue.edu">kjs@purdue.edu</a></p>
-										<p><a href="https://engineering.purdue.edu/Engr">College of Engineering Site</a></p>
+							<div class="row">
+								<div class="staffImg1 noGutter col-md-3 col-xs-12"><img alt="Joe Camp" height="185" src="../images_people/photo-campJoe_thumb.jpg" width="125" /></div>
+								<div class="col-md-6 col-xs-12">
+									<h4 class="staffName">Joseph W. Camp Jr., PhD</h4>
+									<p><strong>Secretary of Faculties</strong>
+										<br/> Professor of Veterinary Parasitology
+										<br/>(765) 494-2585 or (765) 496-2463
+										<br/> <a href="mailto:jcamp@purdue.edu">jcamp@purdue.edu</a>
+										<br/> <a href="staff/Camp_Joe.html">Bio</a>
+										<br/> <a href="speechRequest.php">Request a Speech</a>
+										<br/><strong>Assistant:</strong><span class="staffName">Se'Andra Johnson</span>
+										<br/>(765)494-6398
+										<br/> <a href="sddonald@purdue.edu">sddonald@purdue.edu</a></p>
 									</div>
 								</div>
-								<center>
-									<h3>College of Health and Human Sciences</h3>
-									<hr align="center" color="#B1810B" style="border-top-color: #b1810b;" width="50%"/></center>
-									<div class="row">
-										<div class="noGutter col-md-3 col-xs-12"></div>
-										<div class="staffImg noGutter col-md-3 col-xs-12"><img alt="Christine Ladisch" height="185" src="../images_people/photo-ladischChristine_thumb.jpg"/></div>
-										<div class="col-md-6 col-xs-12">
-											<h4 class="staffName">Christine Ladisch</h4>
-											<p><strong>Dean</strong> <br/> (765) 494-8210 <br/> <a href="mailto:ladischc@purdue.edu">ladischc@purdue.edu</a></p>
-											<p><strong>Assistant:</strong><span class="staffName">Jane Morris </span><br/>(765) 494-8210 <br/> <a href="mailto:pmorris1@purdue.edu">pmorris1@purdue.edu</a></p>
-											<p><a href="http://www.purdue.edu/hhs/">College of Health and Human Sciences Site</a></p>
+								<div class="row">
+									<div class="staffImg1 noGutter col-md-3 col-xs-12"><img alt="Frank J. Dooley" height="185" src="../images_people/photo-dooleyFrank_thumb.jpg" width="125" /></div>
+									<div class="col-md-6 col-xs-12">
+										<h4 class="staffName">Frank J. Dooley, PhD</h4>
+										<p><strong>Vice Provost for Teaching and Learning</strong>
+											<br/> Professor of Agriculture Economics
+											<br/> (765) 494-0615
+											<br/> <a href="mailto:dooleyf@purdue.edu">dooleyf@purdue.edu</a>
+											<br/> <a href="staff/Dooley_Frank.html">Bio</a>
+											<br/> <a href="speechRequest.php">Request a Speech</a>
+											<br/><strong>Assistant:</strong><span class="staffName">Shelly Dunk</span>
+											<br/>(765) 494-0615
+											<br/> <a href="sdunk@purdue.edu">sdunk@purdue.edu</a></p>
 										</div>
 									</div>
-									<center>
-										<h3>Honors College</h3>
-										<hr align="center" color="#B1810B" style="border-top-color: #b1810b;" width="50%"/></center>
-										<div class="row">
-											<div class="noGutter col-md-3 col-xs-12"></div>
-											<div class="staffImg noGutter col-md-3 col-xs-12"><img alt="Rhonda Phillips" height="185" src="../images_people/photo-phillipsRhonda_thumb.jpg" width="125"/></div>
-											<div class="col-md-6 col-xs-12">
-												<h4 class="staffName">Rhonda Phillips</h4>
-												<p><strong>Dean</strong> <br/> (765) 496-3021 <br/> <a href="mailto:rphillips@purdue.edu">rphillips@purdue.edu</a></p>
-												<p><strong>Assistant:</strong><span class="staffName">Sherry Hardebeck</span> <br/> (765) 496-3021 <br/> <a href="mailto:sahardebeck@purdue.edu">sahardebeck@purdue.edu</a></p>
-												<p><a href="https://honors.purdue.edu/">Honors College Site</a></p>
+									<div class="row">
+										<div class="staffImg1 noGutter col-md-3 col-xs-12"><img alt="Peter J. Hollenbeck" height="185" src="../images_people/photo-hollenbeckPeter_thumb.jpg" width="125" /></div>
+										<div class="col-md-6 col-xs-12">
+											<h4 class="staffName">Peter J. Hollenbeck</h4>
+											<p><strong>Vice Provost for Faculty Affairs</strong>
+												<br/>(765) 494-2948
+												<br/> <a href="mailto:phollenb@purdue.edu">phollenb@purdue.edu</a>
+												<br/> <a href="staff/Hollenbeck_Peter.html">Bio</a>
+												<br/> <a href="speechRequest.php">Request a Speech</a>
+												<br/><strong>Assistant:</strong><span class="staffName">Paula Hall</span>
+												<br/>(765)494-0665
+												<br/> <a href="paulahall@purdue.edu">paulahall@purdue.edu</a></p>
 											</div>
 										</div>
-										<center>
-											<h3>College of Liberal Arts</h3>
-											<hr align="center" color="#B1810B" style="border-top-color: #b1810b;" width="50%"/></center>
-											<div class="row">
-												<div class="noGutter col-md-3 col-xs-12"></div>
-												<div class="staffImg noGutter col-md-3 col-xs-12"><img alt="David A. Reingold" height="185" src="../images_people/photo-reingoldDavid_thumb.jpg" width="125"/></div>
-												<div class="col-md-6 col-xs-12">
-													<h4 class="staffName">David A. Reingold</h4>
-													<p><strong>Dean</strong> <br/> (765) 494-3661 <br/> <a href="mailto:reingold@purdue.edu">reingold@purdue.edu</a></p>
-													<p><strong>Assistant:</strong><span class="staffName">Kristen Hunt </span><br/>(765) 494-3661 <br/> <a href="mailto:kristenhunt@purdue.edu">kristenhunt@purdue.edu</a></p>
-													<p><a href="https://www.cla.purdue.edu/">College of Liberal Arts Site</a></p>
+										<div class="row">
+											<div class="staffImg1 noGutter col-md-3 col-xs-12"><img alt="Pam Horne" height="185" src="../images_people/photo-hornePam_thumb.jpg" width="125" /></div>
+											<div class="col-md-6 col-xs-12">
+												<h4 class="staffName">Pamela T. Horne</h4>
+												<p><strong>Vice Provost for Enrollment</strong>
+													<br/>(765) 494-2948
+													<br/> <a href="mailto:phollenb@purdue.edu">phorne@purdue.edu</a>
+													<br/> <a href="staff/Horne_Pam.html">Bio</a>
+													<br/> <a href="speechRequest.php">Request a Speech</a>
+													<br/><strong>Assistant:</strong><span class="staffName">Dana Beck </span>
+													<br/>(765) 494-9116
+													<br/> <a href="dsbeck@purdue.edu">dsbeck@purdue.edu</a></p>
 												</div>
 											</div>
-											<center>
-												<h3>Libraries</h3>
-												<hr align="center" color="#B1810B" style="border-top-color: #b1810b;" width="50%"/></center>
-												<div class="row">
-													<div class="noGutter col-md-3 col-xs-12"></div>
-													<div class="staffImg noGutter col-md-3 col-xs-12"><img alt="James Mullins" height="185" src="../images_people/photo-mullinsJames_thumb.jpg" width="125"/></div>
-													<div class="col-md-6 col-xs-12">
-														<h4 class="staffName">James Mullins</h4>
-														<p><strong>Dean</strong> <br/> (765) 494-2900 <br/> <a href="mailto:jmullins@purdue.edu">jmullins@purdue.edu</a></p>
-														<p><strong>Assistant:</strong><span class="staffName">JoAnne Carow</span> <br/> (765) 494-2900 <br/> <a href="mailto:jcarow@purdue.edu">jcarow@purdue.edu</a></p>
-														<p><a href="https://www.lib.purdue.edu/">Libraries Site</a></p>
+											<div class="row">
+												<div class="staffImg1 noGutter col-md-3 col-xs-12"><img alt="Connie L. Lapinskas" height="185" src="../images_people/photo-lapinskasConnie_thumb.jpg" width="125" /></div>
+												<div class="col-md-6 col-xs-12">
+													<h4 class="staffName">Connie L. Lapinskas</h4>
+													<p><strong>Assistant Provost for Finance and Administration</strong>
+														<br/>(765) 494-7537
+														<br/> <a href="mailto:clapinsk@purdue.edu">clapinsk@purdue.edu</a>
+														<br/> <a href="staff/Lapinskas_Connie.html">Bio</a>
+														<br/> <a href="speechRequest.php">Request a Speech</a>
+														<br/><strong>Assistant:</strong><span class="staffName">Patti Keen,</span> <a href="keenp@purdue.edu">keenp@purdue.edu</a></p>
 													</div>
 												</div>
-												<center>
-													<h3>School of Management</h3>
-													<hr align="center" color="#B1810B" style="border-top-color: #b1810b;" width="50%"/></center>
-													<div class="row">
-														<div class="noGutter col-md-3 col-xs-12"></div>
-														<div class="staffImg noGutter col-md-3 col-xs-12"><img alt="David Hummels" height="185" src="../images_people/photo-hummelsDavid_thumb.jpg" width="125"/></div>
-														<div class="col-md-6 col-xs-12">
-															<h4 class="staffName">David Hummels</h4>
-															<p><strong>Dean</strong> <br/> (765) 494-4366 <br/> <a href="mailto:hummelsd@purdue.edu">hummelsd@purdue.edu</a></p>
-															<p><strong>Assistant:</strong><span class="staffName">Shelley Corbin </span><br/>(765) 494-4366 <br/> <a href="mailto:rdcorbin@purdue.edu">rdcorbin@purdue.edu</a></p>
-															<p><a href="http://www.krannert.purdue.edu/">School of Management Site</a></p>
+												<div class="row">
+													<div class="staffImg1 noGutter col-md-3 col-xs-12"><img alt="Beth McCuskey" height="185" src="../images_people/photo-mcCuskeyBeth_thumb.jpg" width="125" /></div>
+													<div class="col-md-6 col-xs-12">
+														<h4 class="staffName">Beth McCuskey</h4>
+														<p><strong>Vice Provost for Student Life</strong>
+															<br/>(765) 496-0341
+															<br/> <a href="mailto:bmccuske@purdue.edu">bmccuske@purdue.edu</a>
+															<br/> <a href="staff/McCuskey_Beth.html">Bio</a>
+															<br/> <a href="speechRequest.php">Request a Speech</a>
+															<br/><strong>Assistant:</strong><span class="staffName">Melissa Wilson </span>
+															<br/>(765) 496-0341
+															<br/> <a href="mlwilson@purdue.edu">mlwilson@purdue.edu</a></p>
 														</div>
 													</div>
-													<center>
-														<h3>College of Pharmacy</h3>
-														<hr align="center" color="#B1810B" style="border-top-color: #b1810b;" width="50%"/></center>
-														<div class="row">
-															<div class="noGutter col-md-3 col-xs-12"></div>
-															<div class="staffImg noGutter col-md-3 col-xs-12"><img alt="Craig Svensson" height="185" src="../images_people/photo-svenssonCraig_thumb.jpg" width="125"/></div>
-															<div class="col-md-6 col-xs-12">
-																<h4 class="staffName">Craig Svensson</h4>
-																<p><strong>Dean</strong> <br/> (765) 494-1368 <br/> <a href="mailto:svensson@purdue.edu">svensson@purdue.edu</a></p>
-																<p><strong>Assistant:</strong><span class="staffName">Erica L. Berry </span><br/> (765) 494-1368 <br/> <a href="mailto:elberry@purdue.edu">elberry@purdue.edu</a></p>
-																<p><a href="https://www.pharmacy.purdue.edu/">College of Pharmacy Site</a></p>
+													<div class="row">
+														<div class="staffImg1 noGutter col-md-3 col-xs-12"><img alt="Deborah Rupp" height="185" src="../images_people/Deborah_Rupp.jpeg" width="125" /></div>
+														<div class="col-md-6 col-xs-12">
+															<h4 class="staffName">Deborah E. Rupp</h4>
+															<p><strong>Research Integrity Officer</strong>
+																<br/> <strong>William C. Byham Chair in Industrial Organizational Psychology</strong>
+																<br/>(765) 496-6670
+																<br/> <a href="mailto:ruppd@purdue.edu">ruppd@purdue.edu</a>
+																<br/> <a href="staff/Rupp_Deborah.html">Bio</a>
+																<br/> <a href="speechRequest.php">Request a Speech</a>
+																<br/><strong>Assistant:</strong><span class="staffName">Paula Hall</span>
+																<br/>(765) 494-0665
+																<br/> <a href="paulahall@purdue.edu">paulahall@purdue.edu</a></p>
 															</div>
 														</div>
-														<center>
-															<h3>College of Science</h3>
-															<hr align="center" color="#B1810B" style="border-top-color: #b1810b;" width="50%"/></center>
-															<div class="row">
-																<div class="noGutter col-md-3 col-xs-12"></div>
-																<div class="staffImg noGutter col-md-3 col-xs-12"><img alt="Jeffrey Roberts" height="185" src="../images_people/photo-robertsJeffrey_thumb.jpg"/></div>
-																<div class="col-md-6 col-xs-12">
-																	<h4 class="staffName">Jeffrey Roberts</h4>
-																	<p><strong>Dean</strong> <br/> (765) 494-1730 <br/> <a href="mailto:jtrob@purdue.edu">jtrob@purdue.edu</a></p>
-																	<p><strong>Assistant:</strong><span class="staffName">Angie Teel </span><br/> (765) 494-1730 <br/> <a href="mailto:teel@purdue.edu">teel@purdue.edu</a></p>
-																	<p><a href="http://www.science.purdue.edu/">College of Science Site</a></p>
+														<div class="row">
+															<div class="staffImg1 noGutter col-md-3 col-xs-12"><img alt="G. Christine Taylor" height="185" src="../images_people/photo-taylorChristine_thumb.jpg" width="125" /></div>
+															<div class="col-md-6 col-xs-12">
+																<h4 class="staffName">G. Christine Taylor, PhD</h4>
+																<p><strong>Vice Provost for Diversity and Chief Diversity Officer</strong>
+																	<br/>(765) 494-6969
+																	<br/> <a href="mailto:taylorgc@purdue.edu">taylorgc@purdue.edu</a>
+																	<br/> <a href="staff/Taylor_Christine.html">Bio</a>
+																	<br/> <a href="speechRequest.php">Request a Speech</a>
+																	<br/><strong>Assistant:</strong><span class="staffName">Terri Donald, </span><a href="tdonald@purdue.edu">tdonald@purdue.edu</a></p>
 																</div>
 															</div>
-															<center>
-																<h3>Polytechnic Institute</h3>
-																<hr align="center" color="#B1810B" style="border-top-color: #b1810b;" width="50%"/></center>
-																<div class="row">
-																	<div class="noGutter col-md-3 col-xs-12"></div>
-																	<div class="staffImg noGutter col-md-3 col-xs-12"><img alt="Gary Bertoline" height="185" src="../images_people/photo-bertolineGary_thumb.jpg" width="125"/></div>
-																	<div class="col-md-6 col-xs-12">
-																		<h4 class="staffName">Gary Bertoline</h4>
-																		<p><strong>Dean</strong> <br/> (765) 496-0394 <br/> <a href="mailto:bertoline@purdue.edu">bertoline@purdue.edu</a></p>
-																		<p><strong>Assistant:</strong><span class="staffName">Janet Ebershoff</span> <br/> (765) 496-0394 <br/> <a href="mailto:jebershoff@purdue.edu">jebershoff@purdue.edu</a></p>
-																		<p><a href="https://polytechnic.purdue.edu/">Polytechnic Institute Site</a></p>
+															<div class="row">
+																<div class="staffImg1 noGutter col-md-3 col-xs-12"><img alt="Candiss Vibert" height="185" src="../images_people/photo-vibbertCandiss_thumb.jpg" width="125" /></div>
+																<div class="col-md-6 col-xs-12">
+																	<h4 class="staffName">Candiss B. Vibbert</h4>
+																	<p><strong>Associate Provost for Special Initiatives</strong>
+																		<br/>(765) 494-7929
+																		<br/> <a href="mailto:ruppd@purdue.edu">vibbert@purdue.edu</a>
+																		<br/> <a href="staff/Vibbert_Candiss.html">Bio</a>
+																		<br/> <a href="speechRequest.php">Request a Speech</a>
+																		<br/><strong>Assistant:</strong><span class="staffName">Mary Dawson </span>
+																		<br/>(765) 494-5429
+																		<br/> <a href="mdawson@purdue.edu">mdawson@purdue.edu</a></p>
 																	</div>
 																</div>
-																<center>
-																	<h3>College of Veterinary Medicine</h3>
-																	<hr align="center" color="#B1810B" style="border-top-color: #b1810b;" width="50%"/></center>
+															</div>
+															<button class="accordion">Diversity &amp; Inclusion</button>
+															<div class="panel">
+																<div class="row">
+																	<br/>
+																	<div class="noGutter col-md-3 col-xs-12"></div>
+																	<div class="staffImg noGutter col-md-3 col-xs-12"><img alt="Debasish Dutta" height="185" src="../images_people/photo-duttaDebasish_thumb.jpg" width="125" /></div>
+																	<div class="col-md-6 col-xs-12">
+																		<h4 class="staffName">Debasish Dutta, PhD</h4>
+																		<p><strong>Provost and Executive Vice President for Academic Affairs and Diversity</strong>
+																			<br/>Diversity Leadership Team
+																			<br/> <a href="mailto:dutta@purdue.edu">dutta@purdue.edu</a>
+																			<br/> <a href="meetTheProvost.html">Meet the Provost</a>
+																			<br/><strong>Assistant:</strong><span class="staffName">Carla Reeves </span>
+																			<br/>(765) 494-6835
+																			<br/> <a href="reeves@purdue.edu">reeves@purdue.edu</a></p>
+																		</div>
+																	</div>
 																	<div class="row">
 																		<div class="noGutter col-md-3 col-xs-12"></div>
-																		<div class="staffImg noGutter col-md-3 col-xs-12"><img alt="Willie Reed" height="185" src="../images_people/photo-reedWillie_thumb.jpg" width="125"/></div>
+																		<div class="staffImg noGutter col-md-3 col-xs-12"><img alt="Ximena Arriaga" height="185" src="../images_people/photo-ximena.jpg" width="125" /></div>
 																		<div class="col-md-6 col-xs-12">
-																			<h4 class="staffName">Willie Reed</h4>
-																			<p><strong>Dean</strong> <br/> (765) 494-7608 <br/> <a href="mailto:wreed@purdue.edu">wreed@purdue.edu</a></p>
-																			<p><strong>Assistant:</strong><span class="staffName">Barb Cochran</span> <br/> (765) 494-7608 <br/> <a href="mailto:bec@purdue.edu">bec@purdue.edu</a></p>
-																			<p><a href="http://www.vet.purdue.edu/">College of Veterinary Medicine Site</a></p>
-																		</div>
-																	</div>
-																	<center>
-																		<h3>The Graduate School</h3>
-																		<hr align="center" color="#B1810B" style="border-top-color: #b1810b;" width="50%"/></center>
-																		<div class="row">
-																			<div class="noGutter col-md-3 col-xs-12"></div>
-																			<div class="staffImg noGutter col-md-3 col-xs-12"><img alt="Mark Smith" height="185" src="../images_people/deanSmith1.jpg" width="125"/></div>
-																			<div class="col-md-6 col-xs-12">
-																				<h4 class="staffName">Mark Smith</h4>
-																				<p><strong>Dean</strong> <br/> (765) 494-2604 <br/> <a href="mailto:mjts@purdue.edu">mjts@purdue.edu</a></p>
-																				<p><strong>Assistant:</strong><span class="staffName">Casey Hollingsworth </span><br/> (765) 494-2604 <br/> <a href="mailto:chollingsworth@purdue.edu ">chollingsworth@purdue.edu </a></p>
-																				<p><a href="https://www.purdue.edu/gradschool/">The Graduate School Site</a></p>
-																			</div>
-																		</div>
-																	</div>
-																	<button class="accordion">Office of the Assistant Provost for Finance and Administration</button>
-																	<div class="panel">
-																		<div class="row">
-																			<div class="staffImg1 noGutter col-md-3 col-xs-12"><img alt="Connie Lapinskas" height="185" src="../images_people/photo-lapinskasConnie_thumb.jpg" width="125"/></div>
-																			<div class="col-md-6 col-xs-12">
-																				<h4 class="staffName">Connie Lapinskas</h4>
-																				<p><strong>Assistant Provost for Finance and Administration</strong> <br/> (765) 494-7537 <br/> <a href="mailto:clapinsk@purdue.edu">clapinsk@purdue.edu</a><br/> <a href="staff/Lapinskas_Connie.html">Bio</a></p>
-																				<p><strong>Assistant:</strong><span class="staffName">Patti Keen </span><br/> (765) 494-2884 <br/> <a href="mailto:keenp@purdue.edu">keenp@purdue.edu</a></p>
+																			<h4 class="staffName">Ximena Arriaga, PhD</h4>
+																			<p><strong>Provost Fellow on Diversity</strong>
+																				<br/>Diversity Leadership Team
+																				<br/> <a href="mailto:arriaga@purdue.edu">arriaga@purdue.edu</a></p>
 																			</div>
 																		</div>
 																		<div class="row">
 																			<div class="noGutter col-md-3 col-xs-12"></div>
+																			<div class="staffImg noGutter col-md-3 col-xs-12"><img alt="Venetria Patton" height="185" src="../images_people/photo-venetria.jpg" width="125" /></div>
 																			<div class="col-md-6 col-xs-12">
-																				<h4 class="staffName">Rukhsana Malik</h4>
-																				<p><strong>Financial Analyst, Strategic Initiatives</strong> <br/> (765) 494-4104 <br/> <a href="mailto:ramalik@purdue.edu">ramalik@purdue.edu</a></p>
+																				<h4 class="staffName">Venetria Patton, PhD</h4>
+																				<p><strong>Provost Fellow on Diversity</strong>
+																					<br/>Diversity Leadership Team
+																					<br/> <a href="mailto:vpatton@purdue.edu">vpatton@purdue.edu</a></p>
+																				</div>
 																			</div>
-																		</div>
-																		<div class="row">
-																			<div class="staffImg1 noGutter col-md-3 col-xs-12"><img alt="Kristi Hartwick" height="185" src="../images_people/photo-hartwickKristi_thumb.jpg" width="125"/></div>
-																			<div class="col-md-6 col-xs-12">
-																				<h4 class="staffName">Kristi Hartwick</h4>
-																				<p><strong>Director of Financial Affairs for the Office of the Provost</strong> <br/> (765) 494-6521 <br/> <a href="mailto:kristih@purdue.edu">kristih@purdue.edu</a></p>
+																			<div class="row">
+																				<div class="noGutter col-md-3 col-xs-12"></div>
+																				<div class="staffImg noGutter col-md-3 col-xs-12"><img alt="Mark Smith" height="185" src="../images_people/photo-smithMark_thumb.jpg" width="125" /></div>
+																				<div class="col-md-6 col-xs-12">
+																					<h4 class="staffName">Mark Smith, PhD</h4>
+																					<p><strong>Dean of the Graduate School</strong>
+																						<br/>Diversity Leadership Team
+																						<br/> <a href="mailto:mjts@purdue.edu">mjts@purdue.edu</a>
+																						<br/><strong>Assistant:</strong><span class="staffName">asey Hollignsworth,</span> <a href="chollingsworth@purdue.edu">chollingsworth@purdue.edu</a></p>
+																					</div>
+																				</div>
 																			</div>
-																		</div>
-																		<div class="row">
-																			<div class="col-md-3 col-xs-12"></div>
-																			<div class="col-md-6 col-xs-12">
-																				<h4 class="staffName">Sally Abdou</h4>
-																				<p><strong>Business Manager, Office of the Provost</strong> <br/> (765) 496-1084 <br/> <a href="mailto:sabdou@purdue.edu">sabdou@purdue.edu</a></p>
-																			</div>
-																		</div>
-																		<div class="row">
-																			<div class="col-md-3 col-xs-12"></div>
-																			<div class="col-md-6 col-xs-12">
-																				<h4 class="staffName">Ronna Bohlander</h4>
-																				<p><strong>Account Assistant</strong> <br/> (765) 496-3890 <br/> <a href="mailto:rbohlande@purdue.edu">rbohland@purdue.edu</a></p>
-																			</div>
-																		</div>
-																		<div class="row">
-																			<div class="col-md-3 col-xs-12"></div>
-																			<div class="col-md-6 col-xs-12">
-																				<h4 class="staffName">Debbie Miethke</h4>
-																				<p><strong>Financial Analyst</strong> <br/> (765) 496-0424 <br/> <a href="mailto:dmiethke@purdue.edu">dmiethke@purdue.edu</a></p>
-																			</div>
-																		</div>
-																		<div class="row">
-																			<div class="col-md-3 col-xs-12"></div>
-																			<div class="col-md-6 col-xs-12">
-																				<h4 class="staffName">Taina Kuntz</h4>
-																				<p><strong>Account Assistant</strong> <br/> (765) 496-3323 <br/> <a href="mailto:tkuntz@purdue.edu">tkuntz@purdue.edu</a></p>
-																			</div>
-																		</div>
-																		<div class="row">
-																			<div class="col-md-3 col-xs-12"></div>
-																			<div class="col-md-6 col-xs-12">
-																				<h4 class="staffName">Lisa Rile</h4>
-																				<p><strong>Assistant Director of Financial Affairs for the Office of the Provost</strong> <br/> (765) 496-2685<br/> <a href="mailto:llrile@purdue.edu">llrile@purdue.edu</a></p>
-																			</div>
-																		</div>
-																		<div class="row">
-																			<div class="col-md-3 col-xs-12"></div>
-																			<div class="col-md-6 col-xs-12">
-																				<h4 class="staffName">Suzie Robinson</h4>
-																				<p><strong>Reporting and Data Analyst</strong> <br/> (765) 494-0376 <br/> <a href="mailto:csinskee@purdue.edu">csinskee@purdue.edu</a></p>
-																			</div>
-																		</div>
-																		<div class="row">
-																			<div class="col-md-3 col-xs-12"></div>
-																			<div class="col-md-6 col-xs-12">
-																				<h4 class="staffName">Meghan Rusk</h4>
-																				<p><strong>Business Manager, Office of the Provost</strong> <br/> (765) 494-5707 <br/> <a href="mailto:rusk0@purdue.edu">rusk0@purdue.edu</a></p>
-																			</div>
-																		</div>
-																	</div>
-																	<button class="accordion">Faculty Ombudsperson</button>
-																	<div class="panel">
-																		<div class="row">
-																			<div class="staffImg1 noGutter col-md-3 col-xs-12"><img alt="Ralph Webb" height="185" src="../images_people/photo-webbRalph.jpg" width="125"/></div>
-																			<div class="col-md-6 col-xs-12">
-																				<h4 class="staffName">Ralph Webb</h4>
-																				<p><strong>Ombudsperson</strong> <br/> Professor of Communication <br/> (765) 494-3309 <br/> <a href="mailto:rwebb@purdue.edu">rwebb@purdue.edu</a><br/> <a href="../faculty/resources/meetOmbudsperson.html">About Faculty Ombudsperson</a></p>
-																			</div>
-																		</div>
-																	</div>
-																	<button class="accordion">Communications</button>
-																	<div class="panel">
-																		<div class="row">
-																			<div class="noGutter col-md-3 col-xs-12"></div>
-																			<div class="col-md-6 col-xs-12">
-																				<h4 class="staffName">Mary Jane Chew</h4>
-																				<p><strong>Speechwriter/Communications Specialist</strong> <br/>(765) 494-9547 <br/> <a href="mailto:mchew@purdue.edu">mchew@purdue.edu</a></p>
-																			</div>
-																		</div>
-																		<div class="row">
-																			<div class="noGutter col-md-3 col-xs-12"></div>
-																			<div class="col-md-6 col-xs-12">
-																				<h4 class="staffName">Yasaman Shamloo</h4>
-																				<p><strong>Online Communications Specialist</strong> <br/>(765) 496-6708 <br/> <a href="mailto:yshamloo@purdue.edu">yshamloo@purdue.edu</a></p>
-																			</div>
-																		</div>
-																	</div>
-																	<button class="accordion">Provost Support</button>
-																	<div class="panel">
-																		<div class="row">
-																			<div class="noGutter col-md-3 col-xs-12"></div>
-																			<div class="col-md-6 col-xs-12">
-																				<h4 class="staffName">Mary Dawson</h4>
-																				<p><strong>Administrative Assistant</strong> <br/>(765) 494-5429 <br/> <a href="mailto:mdawson@purdue.edu">mdawson@purdue.edu</a></p>
-																			</div>
-																		</div>
-																		<div class="row">
-																			<div class="noGutter col-md-3 col-xs-12"></div>
-																			<div class="col-md-6 col-xs-12">
-																				<h4 class="staffName">Paula Hall</h4>
-																				<p><strong>Secretary/Receptionist</strong> <br/>(765) 494-0665 <br/> <a href="mailto:paulahall@purdue.edu">paulahall@purdue.edu</a></p>
-																			</div>
-																		</div>
-																		<div class="row">
-																			<div class="noGutter col-md-3 col-xs-12"></div>
-																			<div class="col-md-6 col-xs-12">
-																				<h4 class="staffName">Carla A. Reeves</h4>
-																				<p><strong>Executive Assistant to the Provost</strong> <br/>(765) 494-6835 <br/> <a href="mailto:reeves@purdue.edu">reeves@purdue.edu</a></p>
-																			</div>
-																		</div>
-																	</div>
-																	<a class="scrollup" href="#" style="display: none;">Scroll</a>
-<script type="text/javascript">// <![CDATA[
-var acc = document.getElementsByClassName("accordion");
-var i;
-for (i = 0; i < acc.length; i++) {
-	acc[i].onclick = function () {
-		this.classList.toggle("active");
-		this.nextElementSibling.classList.toggle("show");
-	}
-}
-$('#expand-button').click(function () {
-	$('.accordion').addClass('active');
-	$('.maincontent .panel').addClass('show');
-});
-$('#collapse-button').click(function () {
-	$('.accordion').removeClass('active');
-	$('.maincontent .panel').removeClass('show');
-});
+																			<button class="accordion">Faculty Affairs</button>
+																			<div class="panel">
+																				<div class="row">
+																					<div class="staffImg1 noGutter col-md-3 col-xs-12"><img alt="Peter Hollenbeck" height="185" src="../images_people/photo-hollenbeckPeter_thumb.jpg" width="125" /></div>
+																					<div class="col-md-6 col-xs-12">
+																						<h4 class="staffName">Peter Hollenbeck, PhD</h4>
+																						<p><strong>Vice Provost for Faculty Affairs</strong>
+																							<br/> (765) 494-2948
+																							<br/> <a href="mailto:phollenb@purdue.edu">phollenb@purdue.edu</a>
+																							<br/> <a href="staff/Hollenbeck_Peter.html">Bio</a>
+																							<br/><strong>Assistant:</strong><span class="staffName">Paula Hall</span>
+																							<br/>(765) 494-0665
+																							<br/> <a href="paulahall@purdue.edu">paulahall@purdue.edu</a></p>
+																						</div>
+																					</div>
+																					<div class="row">
+																						<div class="staffImg1 noGutter col-md-3 col-xs-12"><img alt="joe camp" height="185" src="../images_people/photo-campJoe_thumb.jpg" width="125" /></div>
+																						<div class="col-md-6 col-xs-12">
+																							<h4 class="staffName">Joseph Camp Jr., PhD</h4>
+																							<p><strong>Secretary of Faculties</strong>
+																								<br/> Professor of Veterinary Parasitology
+																								<br/> (765) 496-1970 or (765) 496-2463
+																								<br/> <a href="mailto:jcamp@purdue.edu">jcamp@purdue.edu</a>
+																								<br/> <a href="staff/Camp_Joe.html">Bio</a>
+																								<br/><strong>Assistant:</strong><span class="staffName">Se'Andra Johnson, </span><a href="sddonald@purdue.edu">sddonald@purdue.edu</a></p>
+																							</div>
+																						</div>
+																						<div class="row">
+																							<div class="col-md-3 col-xs-12"></div>
+																							<div class="col-md-6 col-xs-12">
+																								<h4 class="staffName">Annie Jarrard</h4>
+																								<p><strong>Faculty Affairs Program Manager</strong>
+																									<br/> (765) 494-5425
+																									<br/> <a href="mailto:ajarrard@purdue.edu">ajarrard@purdue.edu</a></p>
+																								</div>
+																							</div>
+																						</div>
+																						<button class="accordion">Office of Engagement</button>
+																						<div class="panel">
+																							<div class="row">
+																								<div class="noGutter col-md-3 col-xs-12"></div>
+																								<div class="staffImg noGutter col-md-3 col-xs-12"><img alt="Steven Abel" height="185" src="../images_people/Steve_Abel.png" width="125" /></div>
+																								<div class="col-md-6 col-xs-12">
+																									<h4 class="staffName">Steve Abel</h4>
+																									<p><strong> Associate Provost for Engagement</strong>
+																										<br/> (765) 494-2744
+																										<br/> <a href="mailto:abels@purdue.edu">abels@purdue.edu</a>
+																										<br/> <a href="staff/Abel_Steve.html">Bio</a>
+																										<br/><strong>Assistant:</strong><span class="staffName">Lisa Duncan </span>
+																										<br/>(765) 494-0899
+																										<br/> <a href="lduncan@purdue.edu">lduncan@purdue.edu</a></p>
+																									</div>
+																								</div>
+																								<div class="row">
+																									<div class="noGutter col-md-3 col-xs-12"></div>
+																									<div class="staffImg noGutter col-md-3 col-xs-12"><img alt="Paul Ainslie" height="185" src="../images_people/photo-paulAinslie.jpg" width="125" /></div>
+																									<div class="col-md-6 col-xs-12">
+																										<h4 class="staffName">Paul Ainslie</h4>
+																										<p><strong> Managing Director, I-STEM Resource Network</strong>
+																											<br/> (765) 494-2757
+																											<br/> <a href="mailto:painslie@purdue.edu">painslie@purdue.edu</a></p>
+																										</div>
+																									</div>
+																									<div class="row">
+																										<div class="noGutter col-md-3 col-xs-12"></div>
+																										<div class="staffImg noGutter col-md-3 col-xs-12"><img alt="Barb Alder " height="185" src="../images_people/barb1.jpg" width="125" /></div>
+																										<div class="col-md-6 col-xs-12">
+																											<h4 class="staffName">Barbara J. Alder</h4>
+																											<p><strong>Director, Office of Engagement, Indianapolis</strong>
+																												<br/>(317) 632-0714
+																												<br/> <a href="mailto:balder@purdue.edu">balder@purdue.edu</a></p>
+																											</div>
+																										</div>
+																										<div class="row">
+																											<div class="noGutter col-md-3 col-xs-12"></div>
+																											<div class="staffImg noGutter col-md-3 col-xs-12"><img alt="Lionel Beaulieu" height="185" src="../images_people/photo-beaulieu.jpg" width="125" /></div>
+																											<div class="col-md-6 col-xs-12">
+																												<h4 class="staffName">Lionel "Bo" Beaulieu</h4>
+																												<p><strong> Director, Center for Regional Development</strong>
+																													<br/> (765) 494-7273
+																													<br/> <a href="mailto:ljb@purdue.edu">ljb@purdue.edu</a></p>
+																												</div>
+																											</div>
+																											<div class="row">
+																												<div class="noGutter col-md-3 col-xs-12"></div>
+																												<div class="staffImg noGutter col-md-3 col-xs-12"><img alt="Dave McKinnis" height="185" src="../images_people/photo-bonora.jpg" width="125" /></div>
+																												<div class="col-md-6 col-xs-12">
+																													<h4 class="staffName">Nick Bonora</h4>
+																													<p><strong>Director, Purdue Conference</strong>
+																														<br/> (765) 494-0234
+																														<br/> <a href="mailto:nbonora@purdue.edu">nbonora@purdue.edu</a></p>
+																													</div>
+																												</div>
+																												<div class="row">
+																													<div class="noGutter col-md-3 col-xs-12"></div>
+																													<div class="staffImg noGutter col-md-3 col-xs-12"><img alt="Jason Henderson" height="185" src="../images_people/photo-henderson.png" width="125" /></div>
+																													<div class="col-md-6 col-xs-12">
+																														<h4 class="staffName">Jason Henderson</h4>
+																														<p><strong> Associate Dean &amp; Director </strong>
+																															<br/> (765) 494-8489
+																															<br/> <a href="mailto:jhenderson@purdue.edu">jhenderson@purdue.edu</a></p>
+																														</div>
+																													</div>
+																													<div class="row">
+																														<div class="noGutter col-md-3 col-xs-12"></div>
+																														<div class="staffImg noGutter col-md-3 col-xs-12"><img alt="Sean Ryan" height="185" src="../images_people/photo-seanRyan.jpg" width="125" /></div>
+																														<div class="col-md-6 col-xs-12">
+																															<h4 class="staffName">Sean Ryan</h4>
+																															<p><strong> Director, Office of Engagement, Fort Wayne </strong>
+																																<br/> (260) 399-1662
+																																<br/> <a href="mailto:ryans@ipfw.edu">ryans@ipfw.edu</a></p>
+																															</div>
+																														</div>
+																														<div class="row">
+																															<div class="noGutter col-md-3 col-xs-12"></div>
+																															<div class="staffImg noGutter col-md-3 col-xs-12"><img alt="Tim Sanders" height="185" src="../images_people/photo-timSanders.jpg" width="125" /></div>
+																															<div class="col-md-6 col-xs-12">
+																																<h4 class="staffName">Tim Sanders</h4>
+																																<p><strong> Director of Engagement Office Purdue Northwest</strong>
+																																	<br/> (219) 785-5500
+																																	<br/> <a href="mailto:tjsander@pnc.edu">tjsanders@pnc.edu</a></p>
+																																</div>
+																															</div>
+																															<div class="row">
+																																<div class="noGutter col-md-3 col-xs-12"></div>
+																																<div class="staffImg noGutter col-md-3 col-xs-12"><img alt="Danny White" height="185" src="../images_people/photo-danny.jpg" width="125" /></div>
+																																<div class="col-md-6 col-xs-12">
+																																	<h4 class="staffName">Danny J. White</h4>
+																																	<p><strong> Manager, Purdue Motorsports, Indianapolis</strong>
+																																		<br/> (317) 632-0716
+																																		<br/> <a href="mailto:white66@purdue.edu">white66@purdue.edu</a></p>
+																																	</div>
+																																</div>
+																																<div class="row">
+																																	<div class="noGutter col-md-3 col-xs-12"></div>
+																																	<div class="staffImg noGutter col-md-3 col-xs-12"><img alt="Heather Oakley" height="185" src="../images_people/photo-oakleyH.jpg" width="125" /></div>
+																																	<div class="col-md-6 col-xs-12">
+																																		<h4 class="staffName">Heather Oakley</h4>
+																																		<p><strong> Office of Engagement - Financial</strong>
+																																			<br/> (765) 494-2895
+																																			<br/> <a href="mailto:oakley@purdue.edu">oakley@purdue.edu</a></p>
+																																		</div>
+																																	</div>
+																																	<div class="row">
+																																		<div class="noGutter col-md-3 col-xs-12"></div>
+																																		<div class="staffImg noGutter col-md-3 col-xs-12"><img alt="Julie Gibbs" height="185" src="../images_people/photo-julieGibbs.jpg" width="125" /></div>
+																																		<div class="col-md-6 col-xs-12">
+																																			<h4 class="staffName">Julie Gibbs</h4>
+																																			<p><strong> Administrative Assistant</strong>
+																																				<br/> (765) 494-2744
+																																				<br/> <a href="mailto:jagibbs@purdue.edu">jagibbs@purdue.edu</a></p>
+																																			</div>
+																																		</div>
+																																		<div class="row">
+																																			<div class="noGutter col-md-3 col-xs-12"></div>
+																																			<div class="staffImg noGutter col-md-3 col-xs-12"><img alt="Lisa Duncan" height="185" src="../images_people/photo-duncanLisa.jpg" width="125" /></div>
+																																			<div class="col-md-6 col-xs-12">
+																																				<h4 class="staffName">Lisa Duncan</h4>
+																																				<p><strong> Administrative Assistant</strong>
+																																					<br/> (765) 494-0899
+																																					<br/> <a href="mailto:llduncan@purdue.edu">lduncan@purdue.edu</a></p>
+																																				</div>
+																																			</div>
+																																		</div>
+																																		<button class="accordion">Student Academic Affairs</button>
+																																		<div class="panel">
+																																			<div class="row">
+																																				<div class="staffImg1 noGutter col-md-3 col-xs-12"><img alt="Frank J. Dooley" height="185" src="../images_people/photo-dooleyFrank_thumb.jpg" width="125" /></div>
+																																				<div class="staffInfo noGutterRight col-md-6 col-xs-12">
+																																					<h4 class="staffName">Frank J. Dooley</h4>
+																																					<p><strong>Vice Provost for Teaching and Learning</strong>
+																																						<br/> Professor of Agriculture Economics
+																																						<br/> (765) 494-0615
+																																						<br/> <a href="mailto:dooleyf@purdue.edu">dooleyf@purdue.edu</a>
+																																						<br/> <a href="staff/Dooley_Frank.html">Bio</a>
+																																						<br/><strong>Assistant:</strong><span class="staffName">Shelly Dunk </span>
+																																						<br/>(765) 494-0615
+																																						<br/> <a href="sdunk@purdue.edu">sdunk@purdue.edu</a></p>
+																																					</div>
+																																				</div>
+																																				<div class="row">
+																																					<div class="staffImg1 noGutter col-md-3 col-xs-12"><img alt="Jon Harbor" height="185" src="../images_people/photo-harborJon_thumb.jpg" width="125" /></div>
+																																					<div class="staffInfo noGutterRight col-md-6 col-xs-12">
+																																						<h4 class="staffName">Jon Harbor</h4>
+																																						<p><strong>Associate Vice Provost for Teaching and Learning</strong>
+																																							<br/>Director of Digital Education
+																																							<br/>Professor of Environmental Geosciences
+																																							<br/> <a href="mailto://jharbor@purdue.edu">jharbor@purdue.edu</a>
+																																							<br/><strong>Assistant:</strong><span class="staffName">Kathy Greenwood </span>
+																																							<br/>(765) 496-2321
+																																							<br/> <a href="kagreen@purdue.edu">kagreen@purdue.edu</a></p>
+																																						</div>
+																																					</div>
+																																					<div class="row">
+																																						<div class="staffImg1 noGutter col-md-3 col-xs-12"><img alt="Pam Horne" height="185" src="../images_people/photo-hornePam_thumb.jpg" width="125" /></div>
+																																						<div class="staffInfo noGutterRight col-md-6 col-xs-12">
+																																							<h4 class="staffName">Pam Horne</h4>
+																																							<p><strong>Vice Provost for Enrollment Management</strong>
+																																								<br/> (765) 494-9116
+																																								<br/> <a href="mailto:phorne@purdue.edu">phorne@purdue.edu</a>
+																																								<br/> <a href="staff/Horne_Pam.html">Bio</a>
+																																								<br/><strong>Assistant:</strong><span class="staffName">Dana Beck</span>
+																																								<br/>(765) 494-9116
+																																								<br/> <a href="dsbeck@purdue.edu">dsbeck@purdue.edu</a></p>
+																																							</div>
+																																						</div>
+																																						<div class="row">
+																																							<div class="staffImg1 noGutter col-md-3 col-xs-12"><img alt="Beth McCuskey" height="185" src="../images_people/photo-mcCuskeyBeth_thumb.jpg" width="125" /></div>
+																																							<div class="staffInfo noGutterRight col-md-6 col-xs-12">
+																																								<h4 class="staffName">Beth McCuskey</h4>
+																																								<p><strong>Vice Provost for Student Life</strong>
+																																									<br/> (765) 496-0341
+																																									<br/> <a href="mailto:bmccuske@purdue.edu">bmccuske@purdue.edu</a>
+																																									<br/> <a href="staff/McCuskey_Beth.html">Bio</a>
+																																									<br/><strong>Assistant:</strong><span class="staffName">Melissa Wilson</span>
+																																									<br/>(765) 496-0341
+																																									<br/> <a href="mlwilson@purdue.edu">mlwilson@purdue.edu</a></p>
+																																								</div>
+																																							</div>
+																																						</div>
+																																						<button class="accordion">Colleges and Deans</button>
+																																						<div class="panel">
+																																							<center>
+																																								<h3>College of Agriculture</h3>
+																																								<hr align="center" color="#B1810B" style="border-top-color: #b1810b;" width="50%" />
+																																							</center>
+																																							<div class="row">
+																																								<div class="noGutter col-md-3 col-xs-12"></div>
+																																								<div class="staffImg noGutter col-md-3 col-xs-12"><img alt="Jay T. Akridge" height="185" src="../images_people/photo-akridgeJay_thumb .jpg" width="125" /></div>
+																																								<div class="col-md-6 col-xs-12">
+																																									<h4 class="staffName">Jay T. Akridge</h4>
+																																									<p><strong>Dean</strong>
+																																										<br/> (765) 494-8391
+																																										<br/> <a href="mailto:akridge@purdue.edu">akridge@purdue.edu</a></p>
+																																										<p><strong>Assistant:</strong><span class="staffName">Ruth Ann Weiderhaft <br/> (765) 494-8391</span>
+																																											<br/> <a href="mailto:weiderhaft@purdue.edu">weiderhaft@purdue.edu</a></p>
+																																											<p><a href="https://ag.purdue.edu/pages/default.aspx">College of Agriculture Site</a></p>
+																																										</div>
+																																									</div>
+																																									<center>
+																																										<h3>College of Education</h3>
+																																										<hr align="center" color="#B1810B" style="border-top-color: #b1810b;" width="50%" />
+																																									</center>
+																																									<div class="row">
+																																										<div class="noGutter col-md-3 col-xs-12"></div>
+																																										<div class="staffImg noGutter col-md-3 col-xs-12"><img alt="Maryann Santos" height="185" src="../images_people/photo-baronaMaryann_thumb.jpg" width="125" /></div>
+																																										<div class="col-md-6 col-xs-12">
+																																											<h4 class="staffName">Maryann Santos</h4>
+																																											<p><strong>Dean</strong>
+																																												<br/> (765) 494-9739
+																																												<br/> <a href="mailto:msdb@purdue.edu">msdb@purdue.edu</a></p>
+																																												<p><strong>Assistant:</strong><span class="staffName">Rita Neidlinger <br/> (765) 494-9739 </span>
+																																													<br/> <a href="mailto:rneidlin@purdue.edu">rneidlin@purdue.edu</a></p>
+																																													<p><a href="http://www.education.purdue.edu/">College of Education Site</a></p>
+																																												</div>
+																																											</div>
+																																											<center>
+																																												<h3>College of Engineering</h3>
+																																												<hr align="center" color="#B1810B" style="border-top-color: #b1810b;" width="50%" />
+																																											</center>
+																																											<div class="row">
+																																												<div class="noGutter col-md-3 col-xs-12"></div>
+																																												<div class="staffImg noGutter col-md-3 col-xs-12"><img alt="Leah Jamieson" height="185" src="../images_people/photo-jamiesonLeah_thumb.jpg" width="125" /></div>
+																																												<div class="col-md-6 col-xs-12">
+																																													<h4 class="staffName">Leah Jamieson</h4>
+																																													<p><strong>Dean</strong>
+																																														<br/> (765) 494-5346
+																																														<br/> <a href="mailto:lhj@purdue.edu">lhj@purdue.edu</a></p>
+																																														<p><strong>Assistant:</strong><span class="staffName">Kristy Smith </span>
+																																															<br/> (765) 494-5346
+																																															<br/> <a href="mailto:kjs@purdue.edu">kjs@purdue.edu</a></p>
+																																															<p><a href="https://engineering.purdue.edu/Engr">College of Engineering Site</a></p>
+																																														</div>
+																																													</div>
+																																													<center>
+																																														<h3>College of Health and Human Sciences</h3>
+																																														<hr align="center" color="#B1810B" style="border-top-color: #b1810b;" width="50%" />
+																																													</center>
+																																													<div class="row">
+																																														<div class="noGutter col-md-3 col-xs-12"></div>
+																																														<div class="staffImg noGutter col-md-3 col-xs-12"><img alt="Christine Ladisch" height="185" src="../images_people/photo-ladischChristine_thumb.jpg" /></div>
+																																														<div class="col-md-6 col-xs-12">
+																																															<h4 class="staffName">Christine Ladisch</h4>
+																																															<p><strong>Dean</strong>
+																																																<br/> (765) 494-8210
+																																																<br/> <a href="mailto:ladischc@purdue.edu">ladischc@purdue.edu</a></p>
+																																																<p><strong>Assistant:</strong><span class="staffName">Jane Morris </span>
+																																																	<br/>(765) 494-8210
+																																																	<br/> <a href="mailto:pmorris1@purdue.edu">pmorris1@purdue.edu</a></p>
+																																																	<p><a href="http://www.purdue.edu/hhs/">College of Health and Human Sciences Site</a></p>
+																																																</div>
+																																															</div>
+																																															<center>
+																																																<h3>Honors College</h3>
+																																																<hr align="center" color="#B1810B" style="border-top-color: #b1810b;" width="50%" />
+																																															</center>
+																																															<div class="row">
+																																																<div class="noGutter col-md-3 col-xs-12"></div>
+																																																<div class="staffImg noGutter col-md-3 col-xs-12"><img alt="Rhonda Phillips" height="185" src="../images_people/photo-phillipsRhonda_thumb.jpg" width="125" /></div>
+																																																<div class="col-md-6 col-xs-12">
+																																																	<h4 class="staffName">Rhonda Phillips</h4>
+																																																	<p><strong>Dean</strong>
+																																																		<br/> (765) 496-3021
+																																																		<br/> <a href="mailto:rphillips@purdue.edu">rphillips@purdue.edu</a></p>
+																																																		<p><strong>Assistant:</strong><span class="staffName">Sherry Hardebeck</span>
+																																																			<br/> (765) 496-3021
+																																																			<br/> <a href="mailto:sahardebeck@purdue.edu">sahardebeck@purdue.edu</a></p>
+																																																			<p><a href="https://honors.purdue.edu/">Honors College Site</a></p>
+																																																		</div>
+																																																	</div>
+																																																	<center>
+																																																		<h3>College of Liberal Arts</h3>
+																																																		<hr align="center" color="#B1810B" style="border-top-color: #b1810b;" width="50%" />
+																																																	</center>
+																																																	<div class="row">
+																																																		<div class="noGutter col-md-3 col-xs-12"></div>
+																																																		<div class="staffImg noGutter col-md-3 col-xs-12"><img alt="David A. Reingold" height="185" src="../images_people/photo-reingoldDavid_thumb.jpg" width="125" /></div>
+																																																		<div class="col-md-6 col-xs-12">
+																																																			<h4 class="staffName">David A. Reingold</h4>
+																																																			<p><strong>Dean</strong>
+																																																				<br/> (765) 494-3661
+																																																				<br/> <a href="mailto:reingold@purdue.edu">reingold@purdue.edu</a></p>
+																																																				<p><strong>Assistant:</strong><span class="staffName">Kristen Hunt </span>
+																																																					<br/>(765) 494-3661
+																																																					<br/> <a href="mailto:kristenhunt@purdue.edu">kristenhunt@purdue.edu</a></p>
+																																																					<p><a href="https://www.cla.purdue.edu/">College of Liberal Arts Site</a></p>
+																																																				</div>
+																																																			</div>
+																																																			<center>
+																																																				<h3>Libraries</h3>
+																																																				<hr align="center" color="#B1810B" style="border-top-color: #b1810b;" width="50%" />
+																																																			</center>
+																																																			<div class="row">
+																																																				<div class="noGutter col-md-3 col-xs-12"></div>
+																																																				<div class="staffImg noGutter col-md-3 col-xs-12"><img alt="James Mullins" height="185" src="../images_people/photo-mullinsJames_thumb.jpg" width="125" /></div>
+																																																				<div class="col-md-6 col-xs-12">
+																																																					<h4 class="staffName">James Mullins</h4>
+																																																					<p><strong>Dean</strong>
+																																																						<br/> (765) 494-2900
+																																																						<br/> <a href="mailto:jmullins@purdue.edu">jmullins@purdue.edu</a></p>
+																																																						<p><strong>Assistant:</strong><span class="staffName">JoAnne Carow</span>
+																																																							<br/> (765) 494-2900
+																																																							<br/> <a href="mailto:jcarow@purdue.edu">jcarow@purdue.edu</a></p>
+																																																							<p><a href="https://www.lib.purdue.edu/">Libraries Site</a></p>
+																																																						</div>
+																																																					</div>
+																																																					<center>
+																																																						<h3>School of Management</h3>
+																																																						<hr align="center" color="#B1810B" style="border-top-color: #b1810b;" width="50%" />
+																																																					</center>
+																																																					<div class="row">
+																																																						<div class="noGutter col-md-3 col-xs-12"></div>
+																																																						<div class="staffImg noGutter col-md-3 col-xs-12"><img alt="David Hummels" height="185" src="../images_people/photo-hummelsDavid_thumb.jpg" width="125" /></div>
+																																																						<div class="col-md-6 col-xs-12">
+																																																							<h4 class="staffName">David Hummels</h4>
+																																																							<p><strong>Dean</strong>
+																																																								<br/> (765) 494-4366
+																																																								<br/> <a href="mailto:hummelsd@purdue.edu">hummelsd@purdue.edu</a></p>
+																																																								<p><strong>Assistant:</strong><span class="staffName">Shelley Corbin </span>
+																																																									<br/>(765) 494-4366
+																																																									<br/> <a href="mailto:rdcorbin@purdue.edu">rdcorbin@purdue.edu</a></p>
+																																																									<p><a href="http://www.krannert.purdue.edu/">School of Management Site</a></p>
+																																																								</div>
+																																																							</div>
+																																																							<center>
+																																																								<h3>College of Pharmacy</h3>
+																																																								<hr align="center" color="#B1810B" style="border-top-color: #b1810b;" width="50%" />
+																																																							</center>
+																																																							<div class="row">
+																																																								<div class="noGutter col-md-3 col-xs-12"></div>
+																																																								<div class="staffImg noGutter col-md-3 col-xs-12"><img alt="Craig Svensson" height="185" src="../images_people/photo-svenssonCraig_thumb.jpg" width="125" /></div>
+																																																								<div class="col-md-6 col-xs-12">
+																																																									<h4 class="staffName">Craig Svensson</h4>
+																																																									<p><strong>Dean</strong>
+																																																										<br/> (765) 494-1368
+																																																										<br/> <a href="mailto:svensson@purdue.edu">svensson@purdue.edu</a></p>
+																																																										<p><strong>Assistant:</strong><span class="staffName">Erica L. Berry </span>
+																																																											<br/> (765) 494-1368
+																																																											<br/> <a href="mailto:elberry@purdue.edu">elberry@purdue.edu</a></p>
+																																																											<p><a href="https://www.pharmacy.purdue.edu/">College of Pharmacy Site</a></p>
+																																																										</div>
+																																																									</div>
+																																																									<center>
+																																																										<h3>College of Science</h3>
+																																																										<hr align="center" color="#B1810B" style="border-top-color: #b1810b;" width="50%" />
+																																																									</center>
+																																																									<div class="row">
+																																																										<div class="noGutter col-md-3 col-xs-12"></div>
+																																																										<div class="staffImg noGutter col-md-3 col-xs-12"><img alt="Jeffrey Roberts" height="185" src="../images_people/photo-robertsJeffrey_thumb.jpg" /></div>
+																																																										<div class="col-md-6 col-xs-12">
+																																																											<h4 class="staffName">Jeffrey Roberts</h4>
+																																																											<p><strong>Dean</strong>
+																																																												<br/> (765) 494-1730
+																																																												<br/> <a href="mailto:jtrob@purdue.edu">jtrob@purdue.edu</a></p>
+																																																												<p><strong>Assistant:</strong><span class="staffName">Angie Teel </span>
+																																																													<br/> (765) 494-1730
+																																																													<br/> <a href="mailto:teel@purdue.edu">teel@purdue.edu</a></p>
+																																																													<p><a href="http://www.science.purdue.edu/">College of Science Site</a></p>
+																																																												</div>
+																																																											</div>
+																																																											<center>
+																																																												<h3>Polytechnic Institute</h3>
+																																																												<hr align="center" color="#B1810B" style="border-top-color: #b1810b;" width="50%" />
+																																																											</center>
+																																																											<div class="row">
+																																																												<div class="noGutter col-md-3 col-xs-12"></div>
+																																																												<div class="staffImg noGutter col-md-3 col-xs-12"><img alt="Gary Bertoline" height="185" src="../images_people/photo-bertolineGary_thumb.jpg" width="125" /></div>
+																																																												<div class="col-md-6 col-xs-12">
+																																																													<h4 class="staffName">Gary Bertoline</h4>
+																																																													<p><strong>Dean</strong>
+																																																														<br/> (765) 496-0394
+																																																														<br/> <a href="mailto:bertoline@purdue.edu">bertoline@purdue.edu</a></p>
+																																																														<p><strong>Assistant:</strong><span class="staffName">Janet Ebershoff</span>
+																																																															<br/> (765) 496-0394
+																																																															<br/> <a href="mailto:jebershoff@purdue.edu">jebershoff@purdue.edu</a></p>
+																																																															<p><a href="https://polytechnic.purdue.edu/">Polytechnic Institute Site</a></p>
+																																																														</div>
+																																																													</div>
+																																																													<center>
+																																																														<h3>College of Veterinary Medicine</h3>
+																																																														<hr align="center" color="#B1810B" style="border-top-color: #b1810b;" width="50%" />
+																																																													</center>
+																																																													<div class="row">
+																																																														<div class="noGutter col-md-3 col-xs-12"></div>
+																																																														<div class="staffImg noGutter col-md-3 col-xs-12"><img alt="Willie Reed" height="185" src="../images_people/photo-reedWillie_thumb.jpg" width="125" /></div>
+																																																														<div class="col-md-6 col-xs-12">
+																																																															<h4 class="staffName">Willie Reed</h4>
+																																																															<p><strong>Dean</strong>
+																																																																<br/> (765) 494-7608
+																																																																<br/> <a href="mailto:wreed@purdue.edu">wreed@purdue.edu</a></p>
+																																																																<p><strong>Assistant:</strong><span class="staffName">Barb Cochran</span>
+																																																																	<br/> (765) 494-7608
+																																																																	<br/> <a href="mailto:bec@purdue.edu">bec@purdue.edu</a></p>
+																																																																	<p><a href="http://www.vet.purdue.edu/">College of Veterinary Medicine Site</a></p>
+																																																																</div>
+																																																															</div>
+																																																															<center>
+																																																																<h3>The Graduate School</h3>
+																																																																<hr align="center" color="#B1810B" style="border-top-color: #b1810b;" width="50%" />
+																																																															</center>
+																																																															<div class="row">
+																																																																<div class="noGutter col-md-3 col-xs-12"></div>
+																																																																<div class="staffImg noGutter col-md-3 col-xs-12"><img alt="Mark Smith" height="185" src="../images_people/deanSmith1.jpg" width="125" /></div>
+																																																																<div class="col-md-6 col-xs-12">
+																																																																	<h4 class="staffName">Mark Smith</h4>
+																																																																	<p><strong>Dean</strong>
+																																																																		<br/> (765) 494-2604
+																																																																		<br/> <a href="mailto:mjts@purdue.edu">mjts@purdue.edu</a></p>
+																																																																		<p><strong>Assistant:</strong><span class="staffName">Casey Hollingsworth </span>
+																																																																			<br/> (765) 494-2604
+																																																																			<br/> <a href="mailto:chollingsworth@purdue.edu ">chollingsworth@purdue.edu </a></p>
+																																																																			<p><a href="https://www.purdue.edu/gradschool/">The Graduate School Site</a></p>
+																																																																		</div>
+																																																																	</div>
+																																																																</div>
+																																																																<button class="accordion">Office of the Assistant Provost for Finance and Administration</button>
+																																																																<div class="panel">
+																																																																	<div class="row">
+																																																																		<div class="staffImg1 noGutter col-md-3 col-xs-12"><img alt="Connie Lapinskas" height="185" src="../images_people/photo-lapinskasConnie_thumb.jpg" width="125" /></div>
+																																																																		<div class="col-md-6 col-xs-12">
+																																																																			<h4 class="staffName">Connie Lapinskas</h4>
+																																																																			<p><strong>Assistant Provost for Finance and Administration</strong>
+																																																																				<br/> (765) 494-7537
+																																																																				<br/> <a href="mailto:clapinsk@purdue.edu">clapinsk@purdue.edu</a>
+																																																																				<br/> <a href="staff/Lapinskas_Connie.html">Bio</a></p>
+																																																																				<p><strong>Assistant:</strong><span class="staffName">Patti Keen </span>
+																																																																					<br/> (765) 494-2884
+																																																																					<br/> <a href="mailto:keenp@purdue.edu">keenp@purdue.edu</a></p>
+																																																																				</div>
+																																																																			</div>
+																																																																			<div class="row">
+																																																																				<div class="noGutter col-md-3 col-xs-12"></div>
+																																																																				<div class="col-md-6 col-xs-12">
+																																																																					<h4 class="staffName">Rukhsana Malik</h4>
+																																																																					<p><strong>Financial Analyst, Strategic Initiatives</strong>
+																																																																						<br/> (765) 494-4104
+																																																																						<br/> <a href="mailto:ramalik@purdue.edu">ramalik@purdue.edu</a></p>
+																																																																					</div>
+																																																																				</div>
+																																																																				<div class="row">
+																																																																					<div class="staffImg1 noGutter col-md-3 col-xs-12"><img alt="Kristi Hartwick" height="185" src="../images_people/photo-hartwickKristi_thumb.jpg" width="125" /></div>
+																																																																					<div class="col-md-6 col-xs-12">
+																																																																						<h4 class="staffName">Kristi Hartwick</h4>
+																																																																						<p><strong>Director of Financial Affairs for the Office of the Provost</strong>
+																																																																							<br/> (765) 494-6521
+																																																																							<br/> <a href="mailto:kristih@purdue.edu">kristih@purdue.edu</a></p>
+																																																																						</div>
+																																																																					</div>
+																																																																					<div class="row">
+																																																																						<div class="col-md-3 col-xs-12"></div>
+																																																																						<div class="col-md-6 col-xs-12">
+																																																																							<h4 class="staffName">Sally Abdou</h4>
+																																																																							<p><strong>Business Manager, Office of the Provost</strong>
+																																																																								<br/> (765) 496-1084
+																																																																								<br/> <a href="mailto:sabdou@purdue.edu">sabdou@purdue.edu</a></p>
+																																																																							</div>
+																																																																						</div>
+																																																																						<div class="row">
+																																																																							<div class="col-md-3 col-xs-12"></div>
+																																																																							<div class="col-md-6 col-xs-12">
+																																																																								<h4 class="staffName">Ronna Bohlander</h4>
+																																																																								<p><strong>Account Assistant</strong>
+																																																																									<br/> (765) 496-3890
+																																																																									<br/> <a href="mailto:rbohlande@purdue.edu">rbohland@purdue.edu</a></p>
+																																																																								</div>
+																																																																							</div>
+																																																																							<div class="row">
+																																																																								<div class="col-md-3 col-xs-12"></div>
+																																																																								<div class="col-md-6 col-xs-12">
+																																																																									<h4 class="staffName">Debbie Miethke</h4>
+																																																																									<p><strong>Financial Analyst</strong>
+																																																																										<br/> (765) 496-0424
+																																																																										<br/> <a href="mailto:dmiethke@purdue.edu">dmiethke@purdue.edu</a></p>
+																																																																									</div>
+																																																																								</div>
+																																																																								<div class="row">
+																																																																									<div class="col-md-3 col-xs-12"></div>
+																																																																									<div class="col-md-6 col-xs-12">
+																																																																										<h4 class="staffName">Taina Kuntz</h4>
+																																																																										<p><strong>Account Assistant</strong>
+																																																																											<br/> (765) 496-3323
+																																																																											<br/> <a href="mailto:tkuntz@purdue.edu">tkuntz@purdue.edu</a></p>
+																																																																										</div>
+																																																																									</div>
+																																																																									<div class="row">
+																																																																										<div class="col-md-3 col-xs-12"></div>
+																																																																										<div class="col-md-6 col-xs-12">
+																																																																											<h4 class="staffName">Lisa Rile</h4>
+																																																																											<p><strong>Assistant Director of Financial Affairs for the Office of the Provost</strong>
+																																																																												<br/> (765) 496-2685
+																																																																												<br/> <a href="mailto:llrile@purdue.edu">llrile@purdue.edu</a></p>
+																																																																											</div>
+																																																																										</div>
+																																																																										<div class="row">
+																																																																											<div class="col-md-3 col-xs-12"></div>
+																																																																											<div class="col-md-6 col-xs-12">
+																																																																												<h4 class="staffName">Suzie Robinson</h4>
+																																																																												<p><strong>Reporting and Data Analyst</strong>
+																																																																													<br/> (765) 494-0376
+																																																																													<br/> <a href="mailto:csinskee@purdue.edu">csinskee@purdue.edu</a></p>
+																																																																												</div>
+																																																																											</div>
+																																																																											<div class="row">
+																																																																												<div class="col-md-3 col-xs-12"></div>
+																																																																												<div class="col-md-6 col-xs-12">
+																																																																													<h4 class="staffName">Meghan Rusk</h4>
+																																																																													<p><strong>Business Manager, Office of the Provost</strong>
+																																																																														<br/> (765) 494-5707
+																																																																														<br/> <a href="mailto:rusk0@purdue.edu">rusk0@purdue.edu</a></p>
+																																																																													</div>
+																																																																												</div>
+																																																																											</div>
+																																																																											<button class="accordion">Faculty Ombudsperson</button>
+																																																																											<div class="panel">
+																																																																												<div class="row">
+																																																																													<div class="staffImg1 noGutter col-md-3 col-xs-12"><img alt="Ralph Webb" height="185" src="../images_people/photo-webbRalph.jpg" width="125" /></div>
+																																																																													<div class="col-md-6 col-xs-12">
+																																																																														<h4 class="staffName">Ralph Webb</h4>
+																																																																														<p><strong>Ombudsperson</strong>
+																																																																															<br/> Professor of Communication
+																																																																															<br/> (765) 494-3309
+																																																																															<br/> <a href="mailto:rwebb@purdue.edu">rwebb@purdue.edu</a>
+																																																																															<br/> <a href="../faculty/resources/meetOmbudsperson.html">About Faculty Ombudsperson</a></p>
+																																																																														</div>
+																																																																													</div>
+																																																																												</div>
+																																																																												<button class="accordion">Communications</button>
+																																																																												<div class="panel">
+																																																																													<div class="row">
+																																																																														<div class="noGutter col-md-3 col-xs-12"></div>
+																																																																														<div class="col-md-6 col-xs-12">
+																																																																															<h4 class="staffName">Mary Jane Chew</h4>
+																																																																															<p><strong>Speechwriter/Communications Specialist</strong>
+																																																																																<br/>(765) 494-9547
+																																																																																<br/> <a href="mailto:mchew@purdue.edu">mchew@purdue.edu</a></p>
+																																																																															</div>
+																																																																														</div>
+																																																																														<div class="row">
+																																																																															<div class="noGutter col-md-3 col-xs-12"></div>
+																																																																															<div class="col-md-6 col-xs-12">
+																																																																																<h4 class="staffName">Yasaman Shamloo</h4>
+																																																																																<p><strong>Online Communications Specialist</strong>
+																																																																																	<br/>(765) 496-6708
+																																																																																	<br/> <a href="mailto:yshamloo@purdue.edu">yshamloo@purdue.edu</a></p>
+																																																																																</div>
+																																																																															</div>
+																																																																														</div>
+																																																																														<button class="accordion">Provost Support</button>
+																																																																														<div class="panel">
+																																																																															<div class="row">
+																																																																																<div class="noGutter col-md-3 col-xs-12"></div>
+																																																																																<div class="col-md-6 col-xs-12">
+																																																																																	<h4 class="staffName">Mary Dawson</h4>
+																																																																																	<p><strong>Administrative Assistant</strong>
+																																																																																		<br/>(765) 494-5429
+																																																																																		<br/> <a href="mailto:mdawson@purdue.edu">mdawson@purdue.edu</a></p>
+																																																																																	</div>
+																																																																																</div>
+																																																																																<div class="row">
+																																																																																	<div class="noGutter col-md-3 col-xs-12"></div>
+																																																																																	<div class="col-md-6 col-xs-12">
+																																																																																		<h4 class="staffName">Paula Hall</h4>
+																																																																																		<p><strong>Secretary/Receptionist</strong>
+																																																																																			<br/>(765) 494-0665
+																																																																																			<br/> <a href="mailto:paulahall@purdue.edu">paulahall@purdue.edu</a></p>
+																																																																																		</div>
+																																																																																	</div>
+																																																																																	<div class="row">
+																																																																																		<div class="noGutter col-md-3 col-xs-12"></div>
+																																																																																		<div class="col-md-6 col-xs-12">
+																																																																																			<h4 class="staffName">Carla A. Reeves</h4>
+																																																																																			<p><strong>Executive Assistant to the Provost</strong>
+																																																																																				<br/>(765) 494-6835
+																																																																																				<br/> <a href="mailto:reeves@purdue.edu">reeves@purdue.edu</a></p>
+																																																																																			</div>
+																																																																																		</div>
+																																																																																	</div>
+																																																																																	<a class="scrollup" href="#" style="display: none;">Scroll</a>
+																																																																																	<script type="text/javascript">
+                    // <![CDATA[
+                    var acc = document.getElementsByClassName("accordion");
+                    var i;
+                    for (i = 0; i < acc.length; i++) {
+                    	acc[i].onclick = function() {
+                    		this.classList.toggle("active");
+                    		this.nextElementSibling.classList.toggle("show");
+                    	}
+                    }
+                    $('#expand-button').click(function() {
+                    	$('.accordion').addClass('active');
+                    	$('.maincontent .panel').addClass('show');
+                    });
+                    $('#collapse-button').click(function() {
+                    	$('.accordion').removeClass('active');
+                    	$('.maincontent .panel').removeClass('show');
+                    });
 
 
 
 
-$(window).scroll(function () {
+                    $(window).scroll(function() {
 
-	if($(this).scrollTop() > 300) {
-		$('#controller').css('position','fixed');
-	}else{
-		$('#controller').css('position','relative');
-	}
+                    	if ($(this).scrollTop() > 300) {
+                    		$('#controller').css('position', 'fixed');
+                    	} else {
+                    		$('#controller').css('position', 'relative');
+                    	}
 
-	if ($(this).scrollTop() > 100) {
-		$('.scrollup').fadeIn();
-	} else {
-		$('.scrollup').fadeOut();
-	}
-});
+                    	if ($(this).scrollTop() > 100) {
+                    		$('.scrollup').fadeIn();
+                    	} else {
+                    		$('.scrollup').fadeOut();
+                    	}
+                    });
 
-$('.scrollup').click(function () {
-	$("html, body").animate({
-		scrollTop: 0
-	}, 600);
-	return false;
-});
-// ]]></script>
+                    $('.scrollup').click(function() {
+                    	$("html, body").animate({
+                    		scrollTop: 0
+                    	}, 600);
+                    	return false;
+                    });
+                    // ]]>
+                </script>
 
-</div>
-<div class="sidenav col-lg-3 col-md-3 col-sm-3 col-xs-12">
-
-
-
-
-<ul>
-	<li/>
-
-	
-
-
-	<li><a href="meetTheProvost.html">Meet the Provost</a></li>
+            </div>
+            <div class="sidenav col-lg-3 col-md-3 col-sm-3 col-xs-12">
 
 
 
 
-	<li><a href="about.html">About</a></li>
+            	<ul>
+            		<li/>
 
 
 
 
-	<li><a href="directory.html">Directory</a></li>
-
-	
+            		<li><a href="meetTheProvost.html">Meet the Provost</a></li>
 
 
-	<li><a href="webinars.html">Provost Webinars</a></li>
-
-	
 
 
-	<li><a href="financial.html">Financial</a></li>
-</ul>
-</div>
-<div class="sidecontent col-lg-3 col-md-3 col-sm-3 col-xs-12">
+            		<li><a href="about.html">About</a></li>
 
-<text/>
 
-</div>
-</div>
-</div>
+
+
+            		<li><a href="directory.html">Directory</a></li>
+
+
+
+
+            		<li><a href="webinars.html">Provost Webinars</a></li>
+
+
+
+
+            		<li><a href="financial.html">Financial</a></li>
+            	</ul>
+            </div>
+            <div class="sidecontent col-lg-3 col-md-3 col-sm-3 col-xs-12">
+
+            	<text/>
+
+            </div>
+        </div>
+    </div>
 </div>
 <!-- End Main Content -->
 <!-- Begin Footer -->
 <div class="footer">
-<div class="container">
-	<div class="row panel-group" id="accordion">
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				<h4 class="panel-title"><a class="collapsed" data-parent="#accordion" data-toggle="collapse" href="#footerone">Communication <i class="fa fa-plus right"></i><i class="fa fa-minus right"></i></a></h4>
-			</div>
-			<div class="panel-collapse collapse" id="footerone">
-				<div class="panel-body">
-					<ul>
-						<li><a href="https://www.purdue.edu/employeeportal">Employee Portal</a></li>
-						<li><a href="https://mycourses.purdue.edu">Blackboard</a></li>
-						<li><a href="http://www.purdue.edu/newsroom/purduetoday/">Purdue Today</a></li>
-						<li><a href="http://portal.office.com/">Office 365</a></li>
-						<li><a href="https://exchange.purdue.edu">Outlook</a></li>
-						<li><a href="https://mypurdue.purdue.edu">myPurdue</a></li>
-					</ul>
+	<div class="container">
+		<div class="row panel-group" id="accordion">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title"><a class="collapsed" data-parent="#accordion" data-toggle="collapse" href="#footerone">Communication <i class="fa fa-plus right"></i><i class="fa fa-minus right"></i></a></h4>
+				</div>
+				<div class="panel-collapse collapse" id="footerone">
+					<div class="panel-body">
+						<ul>
+							<li><a href="https://www.purdue.edu/employeeportal">Employee Portal</a></li>
+							<li><a href="https://mycourses.purdue.edu">Blackboard</a></li>
+							<li><a href="http://www.purdue.edu/newsroom/purduetoday/">Purdue Today</a></li>
+							<li><a href="http://portal.office.com/">Office 365</a></li>
+							<li><a href="https://exchange.purdue.edu">Outlook</a></li>
+							<li><a href="https://mypurdue.purdue.edu">myPurdue</a></li>
+						</ul>
+					</div>
 				</div>
 			</div>
-		</div>
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				<h4 class="panel-title"><a class="collapsed" data-parent="#accordion" data-toggle="collapse" href="#footertwo">Campus <i class="fa fa-plus right"></i><i class="fa fa-minus right"></i></a></h4>
-			</div>
-			<div class="panel-collapse collapse" id="footertwo">
-				<div class="panel-body">
-					<ul>
-						<li><a href="http://www.purdue.edu/purdue/faculty_staff/index.php">Faculty and Staff</a></li>
-						<li><a href="http://www.purdue.edu/purdue/careers/index.php">Careers</a></li>
-						<li><a href="https://www.purdue.edu/physicalfacilities/">Physical Facilities</a></li>
-						<li><a href="https://www.purdue.edu/directory/" target="_blank">Directory</a></li>
-						<li><a href="https://www.purdue.edu/campus_map/index.html">Campus Map</a></li>
-						<li><a href="https://www.purdue.edu/physicalfacilities/constructionmap/index.html">Construction</a></li>
-					</ul>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title"><a class="collapsed" data-parent="#accordion" data-toggle="collapse" href="#footertwo">Campus <i class="fa fa-plus right"></i><i class="fa fa-minus right"></i></a></h4>
+				</div>
+				<div class="panel-collapse collapse" id="footertwo">
+					<div class="panel-body">
+						<ul>
+							<li><a href="http://www.purdue.edu/purdue/faculty_staff/index.php">Faculty and Staff</a></li>
+							<li><a href="http://www.purdue.edu/purdue/careers/index.php">Careers</a></li>
+							<li><a href="https://www.purdue.edu/physicalfacilities/">Physical Facilities</a></li>
+							<li><a href="https://www.purdue.edu/directory/" target="_blank">Directory</a></li>
+							<li><a href="https://www.purdue.edu/campus_map/index.html">Campus Map</a></li>
+							<li><a href="https://www.purdue.edu/physicalfacilities/constructionmap/index.html">Construction</a></li>
+						</ul>
+					</div>
 				</div>
 			</div>
-		</div>
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				<h4 class="panel-title"><a class="collapsed" data-parent="#accordion" data-toggle="collapse" href="#footerthree">Services <i class="fa fa-plus right"></i><i class="fa fa-minus right"></i></a></h4>
-			</div>
-			<div class="panel-collapse collapse" id="footerthree">
-				<div class="panel-body">
-					<ul>
-						<li><a href="http://www.itap.purdue.edu/learning/tools/blackboard/">Blackboard</a></li>
-						<li><a href="http://www.purdue.edu/ehps/">Environmental Health &amp; Public Safety</a></li>
-						<li><a href="https://www.lib.purdue.edu/">Libraries</a></li>
-						<li><a href="https://www.itap.purdue.edu/">ITaP</a></li>
-						<li><a href="https://www.purdue.edu/hr/CHL/index.html">Center for Healthy Living</a></li>
-					</ul>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title"><a class="collapsed" data-parent="#accordion" data-toggle="collapse" href="#footerthree">Services <i class="fa fa-plus right"></i><i class="fa fa-minus right"></i></a></h4>
+				</div>
+				<div class="panel-collapse collapse" id="footerthree">
+					<div class="panel-body">
+						<ul>
+							<li><a href="http://www.itap.purdue.edu/learning/tools/blackboard/">Blackboard</a></li>
+							<li><a href="http://www.purdue.edu/ehps/">Environmental Health &amp; Public Safety</a></li>
+							<li><a href="https://www.lib.purdue.edu/">Libraries</a></li>
+							<li><a href="https://www.itap.purdue.edu/">ITaP</a></li>
+							<li><a href="https://www.purdue.edu/hr/CHL/index.html">Center for Healthy Living</a></li>
+						</ul>
+					</div>
 				</div>
 			</div>
-		</div>
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				<h4 class="panel-title"><a class="collapsed" data-parent="#accordion" data-toggle="collapse" href="#footerfour">Other <i class="fa fa-plus right"></i><i class="fa fa-minus right"></i></a></h4>
-			</div>
-			<div class="panel-collapse collapse" id="footerfour">
-				<div class="panel-body">
-					<ul>
-						<li><a href="http://www.purdueofficialstore.com/">Shop</a></li>
-						<li><a href="http://www.purdue.edu/ethics/clery.html">Clery Reporting Act</a></li>
-						<li><a href="https://www.purdue.edu/bursar/tuition/calculator/">Tuition Calculator</a></li>
-						<li><a href="https://www.purdue.edu/ethics/">Ethics &amp; Compliance</a></li>
-						<li><a href="http://www.purdue.edu/hotline/">Speak Up</a></li>
-					</ul>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title"><a class="collapsed" data-parent="#accordion" data-toggle="collapse" href="#footerfour">Other <i class="fa fa-plus right"></i><i class="fa fa-minus right"></i></a></h4>
+				</div>
+				<div class="panel-collapse collapse" id="footerfour">
+					<div class="panel-body">
+						<ul>
+							<li><a href="http://www.purdueofficialstore.com/">Shop</a></li>
+							<li><a href="http://www.purdue.edu/ethics/clery.html">Clery Reporting Act</a></li>
+							<li><a href="https://www.purdue.edu/bursar/tuition/calculator/">Tuition Calculator</a></li>
+							<li><a href="https://www.purdue.edu/ethics/">Ethics &amp; Compliance</a></li>
+							<li><a href="http://www.purdue.edu/hotline/">Speak Up</a></li>
+						</ul>
+					</div>
 				</div>
 			</div>
-		</div>
-		<div class="motto">
-			<img alt="We are Purdue. What we make moves the world forward." class="horizontal" src="https://www.purdue.edu/purdue/images/templateElements/2015/footer-mottoHorizontal.png"/>
-			<img alt="We are Purdue. What we make moves the world forward." class="vertical" src="https://www.purdue.edu/purdue/images/templateElements/2015/footer-mottoVertical.png"/>
-			<a alt="Facebook" href="http://www.facebook.com/PurdueUniversity" target="_blank"><i class="fa fa-facebook"></i></a> <a alt="Twitter" href="http://twitter.com/LifeAtPurdue" target="_blank"><i class="fa fa-twitter"></i></a> <a alt="YouTube" href="http://www.youtube.com/purdue" target="_blank"><i class="fa fa-youtube"></i></a> <a alt="Instagram" href="http://www.instagram.com/lifeatpurdue" target="_blank"><i class="fa fa-instagram"></i></a> <a alt="Pinterest" href="http://www.pinterest.com/lifeatpurdue/" target="_blank"><i class="fa fa-pinterest"></i></a> <a alt="Google Plus" href="http://plus.google.com/+PurdueUniversity" target="_blank"><i class="fa fa-google-plus"></i></a> <a alt="LinkedIn" href="https://www.linkedin.com/edu/purdue-university-18357" target="_blank"><i class="fa fa-linkedin"></i></a>
+			<div class="motto">
+				<img alt="We are Purdue. What we make moves the world forward." class="horizontal" src="https://www.purdue.edu/purdue/images/templateElements/2015/footer-mottoHorizontal.png" />
+				<img alt="We are Purdue. What we make moves the world forward." class="vertical" src="https://www.purdue.edu/purdue/images/templateElements/2015/footer-mottoVertical.png" />
+				<a alt="Facebook" href="http://www.facebook.com/PurdueUniversity" target="_blank"><i class="fa fa-facebook"></i></a> <a alt="Twitter" href="http://twitter.com/LifeAtPurdue" target="_blank"><i class="fa fa-twitter"></i></a> <a alt="YouTube" href="http://www.youtube.com/purdue" target="_blank"><i class="fa fa-youtube"></i></a> <a alt="Instagram" href="http://www.instagram.com/lifeatpurdue" target="_blank"><i class="fa fa-instagram"></i></a> <a alt="Pinterest" href="http://www.pinterest.com/lifeatpurdue/" target="_blank"><i class="fa fa-pinterest"></i></a> <a alt="Google Plus" href="http://plus.google.com/+PurdueUniversity" target="_blank"><i class="fa fa-google-plus"></i></a> <a alt="LinkedIn" href="https://www.linkedin.com/edu/purdue-university-18357" target="_blank"><i class="fa fa-linkedin"></i></a>
+			</div>
 		</div>
 	</div>
-</div>
 </div>
 <!-- End Footer -->
 <!-- Begin Bottom Signature -->
 <div class="bottom">
-<div class="container">
-	<div class="row">
-		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-			<p>Purdue University, 610 Purdue Mall, West Lafayette, IN 47907, (765) 494-4600</p>
-			<p><a href="http://www.purdue.edu/purdue/disclaimer.html"> &#169; 2015 Purdue University</a> | <a href="http://www.purdue.edu/purdue/ea_eou_statement.html">An equal access/equal opportunity university</a> | <a href="http://www.purdue.edu/securepurdue/DMCAAgent.cfm">Copyright Complaints</a> | <a href="#">Maintained by Office of XYZ</a></p>
-			<p>Trouble with this page? Disability-related <a href="http://www.purdue.edu/disabilityresources/">accessibility</a> issue? Please contact&#160;Office of XYZ at <a href="mailto:XYZ@purdue.edu">XYZ@purdue.edu</a>.</p>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<p>Purdue University, 610 Purdue Mall, West Lafayette, IN 47907, (765) 494-4600</p>
+				<p><a href="http://www.purdue.edu/purdue/disclaimer.html"> &#169; 2015 Purdue University</a> | <a href="http://www.purdue.edu/purdue/ea_eou_statement.html">An equal access/equal opportunity university</a> | <a href="http://www.purdue.edu/securepurdue/DMCAAgent.cfm">Copyright Complaints</a> | <a href="#">Maintained by Office of XYZ</a></p>
+				<p>Trouble with this page? Disability-related <a href="http://www.purdue.edu/disabilityresources/">accessibility</a> issue? Please contact&#160;Office of XYZ at <a href="mailto:XYZ@purdue.edu">XYZ@purdue.edu</a>.</p>
+			</div>
 		</div>
 	</div>
 </div>
-</div>
 <!-- End Bottom Signature -->
 <!-- Bootstrap core JavaScript -->
-<!-- Placed at the end of the document so the pages load faster --> 
+<!-- Placed at the end of the document so the pages load faster -->
 <script src="https://www.purdue.edu/purdue/js/bootstrap.min.js" type="text/javascript"></script>
 
-</body><!-- v2015.08 - Created by Office of Marketing and Media -->
+</body>
+<!-- v2015.08 - Created by Office of Marketing and Media -->
+
 </html>

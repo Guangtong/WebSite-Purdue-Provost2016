@@ -37,129 +37,129 @@ found_selected_rule: 0, // whether there is a selected css rule
 };
 
 
-coolfind.create_find_div = function()
-{
-	// Create the DIV
-	var find_div = document.createElement("div");
-	var el;
-	var find_script = document.getElementById('cool_find_script');
-	var find_html = "";
-	var find_div_style = "display: inline-block; vertical-align: middle; z-index:200;";
-	var button_style = "display: inline-block;  min-height: 1.15em; min-width: 1.5em; max-width: 3em; vertical-align: middle; text-align: center; "+ // Version 6.0b - Added font-size: 1em; for "button" element to display properly
-		"cursor: pointer; margin: 4px; -webkit-user-select:none; -ms-user-select: none;";
-	var menu_style = "display: none;";
-	var input_style = "display: inline; max-width: 55%;"; // Version 6.0b - changed width: 55% to max-width: 55%
-	if (coolfind.lock_button) menu_style += "float: left;";
-	coolfind.addCss(".cool_find_btn {"+button_style+"}"); // Comment out this line if you are using your own css for the buttons
-	coolfind.addCss(".cool_find_menu {"+menu_style+"}"); // Comment out this line if you are using your own css for the find menu
-	coolfind.addCss(".cool_find_input {"+input_style+"}"); // Comment out this line if you are using your own css for the input search box
+// coolfind.create_find_div = function()
+// {
+// 	// Create the DIV
+// 	var find_div = document.createElement("div");
+// 	var el;
+// 	var find_script = document.getElementById('cool_find_script');
+// 	var find_html = "";
+// 	var find_div_style = "display: inline-block; vertical-align: middle; z-index:200;";
+// 	var button_style = "display: inline-block;  min-height: 1.15em; min-width: 1.5em; max-width: 3em; vertical-align: middle; text-align: center; "+ // Version 6.0b - Added font-size: 1em; for "button" element to display properly
+// 		"cursor: pointer; margin: 4px; -webkit-user-select:none; -ms-user-select: none;";
+// 	var menu_style = "display: none;";
+// 	var input_style = "display: inline; max-width: 55%;"; // Version 6.0b - changed width: 55% to max-width: 55%
+// 	if (coolfind.lock_button) menu_style += "float: left;";
+// 	coolfind.addCss(".cool_find_btn {"+button_style+"}"); // Comment out this line if you are using your own css for the buttons
+// 	coolfind.addCss(".cool_find_menu {"+menu_style+"}"); // Comment out this line if you are using your own css for the find menu
+// 	coolfind.addCss(".cool_find_input {"+input_style+"}"); // Comment out this line if you are using your own css for the input search box
 	
-	// If browser does not support svg
-	if (typeof SVGRect == "undefined")
-		coolfind.find_button_html = "Find";
-	else
-		coolfind.find_button_html = '<svg width="1.15em" height="1.15em" style="vertical-align: middle;"viewbox="0 0 30 30">'+
-			'<circle cx="18" cy="12" r="8" stroke="black" stroke-width="2" fill="#fff" fill-opacity="0.4" />'+
-			'<line x1="13" y1="17" x2="0" y2="30" stroke="black" stroke-width="2" />'+
-			'<line x1="10" y1="20" x2="0" y2="30" stroke="black" stroke-width="4" />'+
-			'</svg>';
+// 	// If browser does not support svg
+// 	if (typeof SVGRect == "undefined")
+// 		coolfind.find_button_html = "Find";
+// 	else
+// 		coolfind.find_button_html = '<svg width="1.15em" height="1.15em" style="vertical-align: middle;"viewbox="0 0 30 30">'+
+// 			'<circle cx="18" cy="12" r="8" stroke="black" stroke-width="2" fill="#fff" fill-opacity="0.4" />'+
+// 			'<line x1="13" y1="17" x2="0" y2="30" stroke="black" stroke-width="2" />'+
+// 			'<line x1="10" y1="20" x2="0" y2="30" stroke="black" stroke-width="4" />'+
+// 			'</svg>';
 	
 	
-	find_div.id = "cool_find_div";
-	find_div.style.cssText = find_div_style;
+// 	find_div.id = "cool_find_div";
+// 	find_div.style.cssText = find_div_style;
 	
-	find_html += "<button class='cool_find_btn btn btn-default' id='cool_find_btn'"+ 
-		" title='Find on this page' onclick='coolfind.find_menu(this)'>"+
-		coolfind.find_button_html+"</button> "; 
+// 	find_html += "<button class='cool_find_btn btn btn-default' id='cool_find_btn'"+ 
+// 		" title='Find on this page' onclick='coolfind.find_menu(this)'>"+
+// 		coolfind.find_button_html+"</button> "; 
 
-	if (coolfind.lock_button)
-	{
-		find_div.style.position = "fixed";
-		find_div.style.bottom = "3em";
-		find_div.style.right = "1em";
-	}
-	find_script.parentNode.insertBefore(find_div, find_script.nextSibling);
+// 	if (coolfind.lock_button)
+// 	{
+// 		find_div.style.position = "fixed";
+// 		find_div.style.bottom = "3em";
+// 		find_div.style.right = "1em";
+// 	}
+// 	find_script.parentNode.insertBefore(find_div, find_script.nextSibling);
 	
-	find_html += "<div class='cool_find_menu' id='cool_find_menu'>" +
-		'<form onsubmit="return false;" style="display: inline">' +
-		'<input type="search" class="cool_find_input" id="cool_find_text"' +
-		' onchange="coolfind.resettext();" placeholder="Enter text to find">'+
-		'</form>' + '<span id="cool_find_msg" style="margin-left:10px; margin-right:10px;"></span>';
+// 	find_html += "<div class='cool_find_menu' id='cool_find_menu'>" +
+// 		'<form onsubmit="return false;" style="display: inline">' +
+// 		'<input type="search" class="cool_find_input" id="cool_find_text"' +
+// 		' onchange="coolfind.resettext();" placeholder="Enter text to find">'+
+// 		'</form>' + '<span id="cool_find_msg" style="margin-left:10px; margin-right:10px;"></span>';
 	
-	find_html += "<button class='cool_find_btn btn btn-default' style='margin-left:0; margin-right:0;'"+ 
-		//" style='"+button_style+"'"+ 
-		" title='Find Previous' onclick='coolfind.findprev();'>&#9650;</button>"+
-		"<button class='cool_find_btn btn btn-default' id='cool_find_next'"+ // Version 6.0b - Added id='cool_find_next' for accessibility
-		//" style='"+button_style+"'"+
-		" title='Find Next' onclick='coolfind.findit();'>&#9660;</button> ";
+// 	find_html += "<button class='cool_find_btn btn btn-default' style='margin-left:0; margin-right:0;'"+ 
+// 		//" style='"+button_style+"'"+ 
+// 		" title='Find Previous' onclick='coolfind.findprev();'>&#9650;</button>"+
+// 		"<button class='cool_find_btn btn btn-default' id='cool_find_next'"+ // Version 6.0b - Added id='cool_find_next' for accessibility
+// 		//" style='"+button_style+"'"+
+// 		" title='Find Next' onclick='coolfind.findit();'>&#9660;</button> ";
 		
-	find_html += "</div>";
-	find_div.innerHTML = find_html;
+// 	find_html += "</div>";
+// 	find_div.innerHTML = find_html;
 	
-	// Check to see if css rules exist for hightlight and find_selected.
-	var sheets = document.styleSheets;
-	for (var i=0; i < sheets.length; i++)
-	{
-		// IE <= 8 uses rules; FF & Chrome and IE 9+ users cssRules
-		var rules = (sheets[i].rules) ? sheets[i].rules : sheets[i].cssRules;
-		if (rules != null)
-		for (var j=0; j < rules.length; j++)
-		{
-			if (rules[j].selectorText == '.highlight')
-				coolfind.found_highlight_rule = 1;
-			else if (rules[j].selectorText == '.find_selected')
-				coolfind.found_selected_rule = 1;
-		}
-	}
-}
+// 	// Check to see if css rules exist for hightlight and find_selected.
+// 	var sheets = document.styleSheets;
+// 	for (var i=0; i < sheets.length; i++)
+// 	{
+// 		// IE <= 8 uses rules; FF & Chrome and IE 9+ users cssRules
+// 		var rules = (sheets[i].rules) ? sheets[i].rules : sheets[i].cssRules;
+// 		if (rules != null)
+// 		for (var j=0; j < rules.length; j++)
+// 		{
+// 			if (rules[j].selectorText == '.highlight')
+// 				coolfind.found_highlight_rule = 1;
+// 			else if (rules[j].selectorText == '.find_selected')
+// 				coolfind.found_selected_rule = 1;
+// 		}
+// 	}
+// }
 
 
-coolfind.find_menu =  function(that)
-{
-	var textbox = document.getElementById('cool_find_text');
-	if (that.nextElementSibling.style.display != "inline-block")
-	{
-		that.nextElementSibling.style.display = 'inline-block';
-		that.innerHTML = "X";
-		that.title = "Close";
-		// Make document look for enter key and esc key
-		if (document.addEventListener) // Chrome, Safari, FF, IE 9+
-			document.addEventListener('keydown', coolfind.checkkey, false);
-		else // IE < 9
-			document.attachEvent('onkeydown', coolfind.checkkey);
-		// Put cursor focus in the text box
-		textbox.focus(); 
-		textbox.select(); // ver 5.1 - 10/17/2014 - Select the text to search for
-		textbox.setSelectionRange(0, 9999); // ver. 5.3 - 5/15/2015 - iOS woould not select without this
-	}
-	else
-	{
-		that.nextElementSibling.style.display = 'none';
-		that.innerHTML = coolfind.find_button_html;
-		that.title = "Find on this page";
-		coolfind.unhighlight(); // Remove highlights of any previous finds - ver 5.1 - 10/17/2014
-		// Make document no longer look for enter key and esc key
-		if (document.removeEventListener) // Chrome, Safari, FF, IE 9+
-			document.removeEventListener('keydown', coolfind.checkkey, false);
-		else // IE < 9
-			document.detachEvent('onkeydown', coolfind.checkkey);
-	}
-}
+// coolfind.find_menu =  function(that)
+// {
+// 	var textbox = document.getElementById('cool_find_text');
+// 	if (that.nextElementSibling.style.display != "inline-block")
+// 	{
+// 		that.nextElementSibling.style.display = 'inline-block';
+// 		that.innerHTML = "X";
+// 		that.title = "Close";
+// 		// Make document look for enter key and esc key
+// 		if (document.addEventListener) // Chrome, Safari, FF, IE 9+
+// 			document.addEventListener('keydown', coolfind.checkkey, false);
+// 		else // IE < 9
+// 			document.attachEvent('onkeydown', coolfind.checkkey);
+// 		// Put cursor focus in the text box
+// 		textbox.focus(); 
+// 		textbox.select(); // ver 5.1 - 10/17/2014 - Select the text to search for
+// 		textbox.setSelectionRange(0, 9999); // ver. 5.3 - 5/15/2015 - iOS woould not select without this
+// 	}
+// 	else
+// 	{
+// 		that.nextElementSibling.style.display = 'none';
+// 		that.innerHTML = coolfind.find_button_html;
+// 		that.title = "Find on this page";
+// 		coolfind.unhighlight(); // Remove highlights of any previous finds - ver 5.1 - 10/17/2014
+// 		// Make document no longer look for enter key and esc key
+// 		if (document.removeEventListener) // Chrome, Safari, FF, IE 9+
+// 			document.removeEventListener('keydown', coolfind.checkkey, false);
+// 		else // IE < 9
+// 			document.detachEvent('onkeydown', coolfind.checkkey);
+// 	}
+// };
 
 
-coolfind.addCss = function(css)
-{
-	// Example: addCss(".cool_textchanger_btn { display: inline-block; min-width: 2em; max-width: 3em; }");
-	var style = document.createElement('style');
-	style.type = 'text/css';
-	if (style.styleSheet) // IE < 9
-		style.styleSheet.cssText = css;
-	else 
-		style.appendChild(document.createTextNode(css));
+// coolfind.addCss = function(css)
+// {
+// 	// Example: addCss(".cool_textchanger_btn { display: inline-block; min-width: 2em; max-width: 3em; }");
+// 	var style = document.createElement('style');
+// 	style.type = 'text/css';
+// 	if (style.styleSheet) // IE < 9
+// 		style.styleSheet.cssText = css;
+// 	else 
+// 		style.appendChild(document.createTextNode(css));
 	
-	document.getElementsByTagName("head")[0].appendChild(style);
+// 	document.getElementsByTagName("head")[0].appendChild(style);
 	
-}
+// }
 
 
 coolfind.highlight = function(word, node)
@@ -486,8 +486,14 @@ coolfind.scrollToPosition = function(field)   //field is the span DOM
 		// Only scroll to element if it is out of the current screen
 		if (elemPosX < scrollLeft || elemPosX > scrollRight ||
 			elemPosY < scrollTop || elemPosY > scrollBottom) {
-			var find_script = document.getElementById('cool_find_script');
-			window.scrollTo(elemPosX ,elemPosY - find_script.parentNode.offsetHeight); 
+			var container = document.getElementById('controller');
+			if(container.style.position === 'fixed'){
+				window.scrollTo(elemPosX ,elemPosY - container.offsetHeight); 
+			}else{
+				//window.scrollTo(elemPosX ,elemPosY); 
+				window.scrollTo(elemPosX ,elemPosY - container.offsetHeight * 2); 
+			}
+			
 		}
 		
 		//field.scrollIntoView();
@@ -583,4 +589,8 @@ coolfind.selectElementContents = function(el)
 } // end function selectElementContents(el) 
 
 
-coolfind.create_find_div();
+//coolfind.create_find_div();
+if (document.addEventListener) // Chrome, Safari, FF, IE 9+
+	document.addEventListener('keydown', coolfind.checkkey, false);
+else // IE < 9
+	document.attachEvent('onkeydown', coolfind.checkkey);
